@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+.first-view {
+  height: calc(100vh - 110px);/* ファーストビューの高さの設定 */
+  background-image: url(../images/index/bg-main.jpg);/*背景画像の指定*/
+  background-repeat: no-repeat;/* 背景の繰り返しを解除 */
+  background-position: center center;/* 背景画像の位置調整 */
+  background-size: cover;/* 背景画像の大きさ設定 */
+  display: flex;
+  align-items: center;
+}
+
+.first-view-text {/* 見出しとキャッチコピーの設定 */
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;/* やや右に移動 */
+  padding-bottom: 80px;/* やや上に移動 */
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.first-view-text h1 {/* 見出しの設定 */
+  font-family: 'Montserrat', sans-serif;/* フォント設定 */
+  font-size: 56px;
+  line-height: 72px;
+}
+
+.first-view-text p{/* キャッチコピーの設定 */
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.lead {/* 導入文エリアの設定 */
+  max-width: 1200px;/* 導入文エリア全体の幅を指定 */
+  margin: 60px auto;
+}
+
+.lead p {/* 導入文スタイルの設定 */
+  line-height: 2;
+  text-align: center;
+}
+
+.link-button-area {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.link-button {
+  background-color: #f4dd64;
+  display: inline-block;
+  min-width: 180px;/* 背景色幅の大きさ */
+  line-height: 48px;/* 背景色高さ */
+  border-radius: 24px;/* 背景色角の丸み */
+  font-family: 'Montserrat', sans-serif;/* フォント設定 */
+  font-size: 14px;
+}
+
+.link-button:hover{/* カーソルをボタンに載せると色が変化 */
+  background-color: #d8b500;
+}
+
+.recommend{/*おすすめ商品エリアの設定*/
+  background-color: #f8f8f8;
+  padding-top: 45px;
+  padding-bottom: 55px;
+}
+
+.recommend h2 {/*『RECOMMEND』の文字の設定*/
+  font-size: 22px;
+  font-weight: bold;/*太字*/
+  text-align: center;
+}
+
+.recommend h2::after{/*『RECOMMEND』文字下に下線部を生成*/
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: #000;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-list {/*おすすめ商品一覧の設定*/
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  overflow: scroll;/*はみ出たメニューをスクロールで表示*/
+}
+
+.item-list li {/*個々の商品欄の設定*/
+  flex-shrink: 0;
+  width: 260px;
+  margin-left: 75px;
+}
+
+.item-list li:first-child {/*カフェラテ欄の左余白を修正*/
+  margin-left: 0;
+}
+
+.item-list dl {
+  margin-top: 20px;/*画像と文章の間に空間を生成*/
+}
+
+.item-list dt {
+  font-weight: bold;/*商品名を太字に*/
+}
+
+.item-list dd {/*商品説明の設定*/
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.item-list .price {/*商品価格の設定*/
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+@media (max-width:800px) {
+
+  .first-view {
+    height: calc(100vh-50px);/* ファーストビューエリアの高さを設定 */
+    background-image: url(../images/index/bg-main-sp.jpg);/*モバイル用画像に変更*/
+    align-items: flex-start;/* 見出しとキャッチコピーを上部に表示 */
+  }
+
+  .first-view-text {
+    padding-top: 60px;
+    padding-left: 20px;
+  }
+
+  .first-view-text h1 {
+    font-size: 36px;
+    margin-top: 15px;
+  }
+
+  .lead {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .lead p {
+    text-align: left;
+  }
+
+  .item-list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .item-list li {
+    width: 220px;
+    margin-left: 30px;
+  }
+}
