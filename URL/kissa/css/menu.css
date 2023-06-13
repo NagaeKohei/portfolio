@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+.title {/*タイトルエリアの設定*/
+  height: 310px;
+  background-image: url(../images/menu/bg-main.jpg);/*背景画像の指定*/
+  background-repeat: no-repeat;/*背景画像を繰り返さない*/
+  background-position: center center;/*背景画像の位置を中央に*/
+  background-size: cover;/*背景画像の大きさをエリアいっぱいに*/
+  display: flex;/*タイトルを横並びに*/
+  flex-direction: column;/*タイトルを縦並びに*/
+  justify-content: center;/*タイトルをエリアのy軸に対して中央に*/
+  align-items: center;/*タイトルをエリアのx軸に対して中央に*/
+  color: #fff;
+  text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.title h1 {/*MENUのフォント設定*/
+  font-family: 'Montserrat', sans-serif;/* フォント設定 */
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.title p {/*「メニュー」のフォント設定*/
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.item-list {
+  width: 930px;
+  max-width: 90%;
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,240px);/*エリア幅930pxに収まるか、ブラウザ表示によって列数が変更されるメニュー表の作成*/
+  column-gap: 95px;/*列と列の間隔を95pxに*/
+  row-gap: 70px;/*行と行の間隔を70pxに*/
+  justify-content: center;/*表をエリアの中央に*/
+}
+
+.item-list dl {
+  margin-top: 20px;/*画像と文章の間に空間を生成*/
+}
+
+.item-list dt {
+  font-weight: bold;/*商品名を太字に*/
+}
+
+.item-list dd {/*商品説明の設定*/
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.item-list .price {/*商品価格の設定*/
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.item-list li {
+  position: relative;
+}
+
+.item-list .item-label {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 18px);
+  font-size: 10px;
+  white-space: nowrap;
+  transform-origin: top left;
+  transform: rotate(90deg);
+}
+
+.footer {
+  margin-top: 100px;
+}
+
+@media (max-width: 800px) {
+  .item-list {
+    margin-top: 45px;
+    row-gap: 40px;
+  }
+}
