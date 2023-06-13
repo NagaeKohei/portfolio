@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  color: #24292e;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.contents{
+  max-width: 960px;
+  padding: 0 4%;
+  margin: 0 auto;
+}
+
+/*------------------------------------------
+ヘッダー
+--------------------------------------------*/
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 270px;
+}
+
+header ul {
+  display: flex;
+}
+
+header li {
+  margin-right: 15px;
+}
+
+header li:hover {
+  opacity: 0.5;
+}
+
+/*--------------------------------------------------
+メイン
+----------------------------------------------------*/
+
+/*メインビジュアル*/
+.mainvisual-pc {
+  margin-bottom: 80px;
+}
+
+.mainvisual-pc img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover; /*アスペクト比を崩さず中央で画像をトリミング*/
+}
+
+.wrapper{
+  margin-bottom: 130px;
+}
+
+.contents h2 {
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+/*アバウト*/
+.about-text {
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.about-text p {
+  margin-bottom: 30px;
+}
+
+.about-text ul {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.about-text li:first-child {
+  margin-bottom: 30px;
+}
+
+/*ワークス*/
+.works-photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.works-photos img {
+  width: 31%;
+  margin-bottom: 23px;
+}
+
+/*ニュース*/
+.news-text {
+  border-bottom: 1px solid #24292e;
+  font-size: 0.95rem;
+}
+
+.news-text dl {
+  display: flex;
+  border-top: 1px solid #24292e;
+  padding: 15px 5px;
+}
+
+.news-text dt{
+  margin-right: 40px;
+}
+
+/*コンタクト*/
+.contact-text li {
+  display: flex;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.contact-text li p {
+  width: 200px;
+}
+
+.contact-text li input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid  #24292e;
+  padding: 10px;
+}
+
+#message-text {
+  width: 100%;
+  border: 1px solid #24292e;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.submit-buttom {
+  padding: 15px 100px;
+  border: 1px solid  #24292e;
+  background-color: #24292e;
+  color: aliceblue;
+  display: block;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.submit-buttom:hover {
+  background-color: aliceblue;
+  color: #24292e;
+}
+
+
+/*フッター*/
+footer {
+  height: 35px;
+  background-color: #24292e;
+  color: aliceblue;
+  font-size: 0.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*---------------------------------------------
+レスポンシブデザイン
+-----------------------------------------------*/
+@media (max-width:600px){
+  /*ヘッダー*/
+  header {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  header h1 {
+    margin-top: 2%;
+  }
+
+  header nav {
+    margin-bottom: 2%;
+  }
+
+  /*メイン*/
+  /*ワークス*/
+  .works-photos img {
+    width: 100%;
+  }
+
+  /*コンタクト*/
+  .contact-text li {
+    flex-direction: column;
+  }
+
+  .submit-buttom {
+    margin-top: 10%;
+  }
+}
