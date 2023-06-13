@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+.title {/*タイトルエリアの設定*/
+  height: 310px;
+  background-image: url(../images/concept/bg-main.jpg);/*背景画像の指定*/
+  background-repeat: no-repeat;/*背景画像を繰り返さない*/
+  background-position: center center;/*背景画像の位置を中央に*/
+  background-size: cover;/*背景画像の大きさをエリアいっぱいに*/
+  display: flex;/*タイトルを横並びに*/
+  flex-direction: column;/*タイトルを縦並びに*/
+  justify-content: center;/*タイトルをエリアのy軸に対して中央に*/
+  align-items: center;/*タイトルをエリアのx軸に対して中央に*/
+  color: #fff;
+  text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.title h1 {/*CONCEPTのフォント設定*/
+  font-family: 'Montserrat', sans-serif;/* フォント設定 */
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.title p {/*「私たちについて」のフォント設定*/
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.feature {/*コンセプトエリアの設定*/
+  display: flex;/*画像と文章を横並びに*/
+  justify-content: space-between;/*画像と文章を均等に配置、文章は先頭に、画像は末尾に寄せる*/
+  width: 930px;
+  max-width: 90%;
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: flex-start;/*画像の高さを文章の長さに影響を受けないようにした*/
+}
+
+.feature img {/*コンセプトエリアの画像設定*/
+  width: 360px;
+}
+
+.feature-text {/*コンセプトエリアの文章設定*/
+  max-width: 500px;
+  margin-right: 40px;
+}
+
+.reverse {/*2つ目のコンセプトエリアの設定*/
+  flex-direction: row-reverse;/*配置順を反対に*/
+}
+
+.reverse .feature-text {/*2つ目のコンセプトエリア文章の設定*/
+  margin-left: 40px;/*通常では右側に40pxの余白を生成したが、配置を変えたので逆の左側に余白を生成*/
+  margin-right: 0;/*通常で生成した右側40pxの余白を削除*/
+}
+
+.feature-text h2 {/*中見出しの設定*/
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.feature-text h2::after{/*中見出しに短い下線を生成*/
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: black;
+  margin-top: 20px;
+}
+
+.feature-text p {/*コンセプト文の設定*/
+  font-size: 15px;
+  line-height: 28px;
+  margin-top: 25px;
+}
+
+.movie {/*動画掲載エリアの大きさと位置の設定*/
+  width: 930px;
+  max-width: 90%;
+  background-color: #f8f8f8;
+  padding: 50px 60px;
+  margin-top: 55px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movie h2 {/*動画エリアの見出しの設定*/
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.movie h2::after {/*動画エリア見出しに下線を生成*/
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: black;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movie iframe {/*動画の幅と高さの設定*/
+  display: block;
+  width: 100%;
+  height: 456px;
+  margin-top: 30px;
+}
+
+.movie p {/*動画エリアの解説文のスタイル設定*/
+  font-size: 15px;
+  line-height: 28px;
+  margin-top: 20px;
+}
+
+.footer {
+  margin-top: 100px;
+}
+
+@media (max-width:800px) {
+  .feature {
+    display: block;/*コンセプト文と画像の横並びを解除*/
+    width: 500px;
+    margin-top: 45px;
+  }
+
+  .feature-text {
+    margin-right: 0;/*コンセプト文右の余白を削除*/
+  }
+
+  .reverse .feature-text {
+    margin-left: 0;/*コンセプト文左の余白を削除*/
+  }
+
+  .feature img {/*画像の設定*/
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+  }
+
+  .movie {
+    width: 500px;
+    padding: 30px 25px;
+  }
+
+  .movie iframe {
+    height: 240px;
+  }
+}
