@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Web Entertainment Design</title>
+  <meta name="description" content="テキストテキストテキストテキストテキストテキスト">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/web.css">
+  <link rel="icon" href="./img/favicon.ico">
+</head>
+<body>
+  <header id="menu">
+    <div>
+      <a href="./web.html">
+        <img id="logo" src="./img/logo.svg" alt="ロゴマーク">
+      </a>
+      <nav id="site-menu">
+        <ul>
+          <li>
+            <a href="#news">NEWS</a>
+          </li>
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#business">BUSINESS</a>
+          </li>
+          <li>
+            <a href="#company">COMPANY</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="contact">
+      <button id="contact-btn" type="button">お問い合わせ</button>
+    </div>
+  </header>
+
+  <div id="login">
+    <div class="container">
+      <div class="card">
+        <a class="login">Log in</a>
+        <div class="inputBox">
+          <input type="text" required="required">
+          <span class="user">Username</span>
+        </div>
+        <div class="inputBox">
+          <input type="password" required="required">
+          <span>Password</span>
+        </div>
+        <div class="btn-list">
+          <button class="btn back">Back</button>
+          <button class="btn">Enter</button>
+        </div>
+      </div>      
+    </div>
+  </div>
+
+  <div class="bk-color"></div>
+
+  <main>
+    <div id="main-visual">
+      <img src="./img/mainvisual.jpg" alt="メイン写真">
+    </div>
+
+    <div id="news" class="animation_box">
+      <div class="title-font">
+        <h2>NEWS</h2>
+        <p>ニュース</p>
+      </div>
+      <ul id="topics">
+        <li>
+          <p>2021.01.01<span>NEWS</span></p>
+          <p>タイトルタイトルタイトルタイトル</p>
+        </li>
+        <li>
+          <p>2021.01.01<span>PRESS</span></p>
+          <p>タイトルタイトルタイトルタイトル</p>
+        </li>
+        <li>
+          <p>2021.01.01<span>NEWS</span></p>
+          <p>タイトルタイトルタイトルタイトル</p>
+        </li>
+      </ul>
+    </div>
+
+    <div id="about">
+      <img src="./img/about.jpg" class="fadein" alt="写真">
+      <div id="about-text">
+        <div class="title-font">
+          <h2>ABOUT</h2>
+          <p>私たちについて</p>
+        </div>
+        <div id="abtext">
+          <p>テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト</p>
+          <p>テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト</p>
+          <p>テキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキスト</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="business">
+      <div class="title-font">
+        <h2>BUSINESS</h2>
+        <p>事業内容</p>
+      </div>
+      <ul id="business-img">
+        <li>
+          <p>- Web制作・マーケティング</p>
+          <img src="./img/business1.jpg" alt="">
+          <p>- インターネットメディア事業</p>
+          <img src="./img/business2.jpg" alt="">
+        </li>
+        <li>
+          <p>- プロモーション企画・制作</p>
+          <img src="./img/business3.jpg" alt="">
+          <p>- ソーシャル企画・運営</p>
+          <img src="./img/business4.jpg" alt="">
+        </li>
+      </ul>
+    </div>
+
+    <div id="company">
+      <div id="company-text">
+        <div class="title-font">
+          <h2>COMPANY</h2>
+          <p>会社概要</p>
+        </div>
+        <dl id="access">
+          <dt>会社名</dt>
+          <dd>ウェブエンターテインメントデザイン株式会社</dd>
+          <dt>所在地</dt>
+          <dd>東京都渋谷区桜丘町99-9 West Building 3F</dd>
+          <dt>代表</dt>
+          <dd>XXXXXX</dd>
+          <dt>設立</dt>
+          <dd>2021年1月1日</dd>
+          <dt>資本金</dt>
+          <dd>3,000,000円</dd>
+          <dt>事業内容</dt>
+          <dd>Web制作。マーケティング<br>
+          インターネットメディア事業<br>
+          プロモーション企画・制作<br>
+          ソーシャル企画・運営</dd>
+        </dl>
+      </div>
+      <div id="company-img">
+        <img src="./img/company.jpg" alt="">
+      </div>      
+    </div>
+  </main>
+  
+  <footer>
+    <div id="footer-link">
+      <div id="link-text">
+        <a href="./web.html">
+          <img src="./img/logo.svg" alt="ロゴマーク">
+        </a>
+        <ul>
+          <li>Web Entertainment Design Inc.</li>
+          <li>West Building 3F</li>
+          <li>9-99 Sakuragaokacho Shibuya-ku<br>Tokyo, Japan 150-0031</li>
+          <li>T/99-9999-9999</li>
+        </ul>
+      </div>
+      <p>&copy; Web Entertainment Design Inc.</p>
+    </div>
+    </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./java/web.js"></script>
+</body>
+</html>
