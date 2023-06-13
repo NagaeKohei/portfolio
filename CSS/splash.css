@@ -1,207 +1,84 @@
 @charset "UTF-8";
-/* スクロールの動きをスムーズにする */
-html {
-  scroll-behavior: smooth;
-}
-
-/* 要素の幅と高さにpaddingと線の太さを含める */
-* {
-  box-sizing: border-box;
-}
-
-/* スクロールバーの見た目をカスタマイズする */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-main {
-  position: relative;
-  background-color: #dedfc8;
-}
-main #works-contents {
-  width: 100%;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 80px;
-  padding-bottom: 100px;
-  padding-left: 2%;
-  padding-right: 2%;
-  display: flex;
-  justify-content: space-between;
-}
-@media (max-width: 768px) {
-  main #works-contents {
-    flex-direction: column;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-main #works-contents #works-img {
-  width: 49%;
-  display: flex;
-  justify-content: space-between;
-}
-main #works-contents #works-img #img-pc {
-  width: 65%;
-}
-main #works-contents #works-img #img-pc p {
-  font-size: 1.2rem;
-}
-main #works-contents #works-img #img-sp {
-  width: 33%;
-}
-main #works-contents #works-img #img-sp p {
-  font-size: 1.2rem;
-}
-main #works-contents #works-img img {
-  width: 100%;
-  border: 2px solid #c6c6c6;
-  border-radius: 5px;
-  cursor: pointer;
-}
-@media (max-width: 768px) {
-  main #works-contents #works-img {
-    width: 100%;
-    flex-direction: column;
-  }
-  main #works-contents #works-img #img-pc {
-    width: 100%;
-  }
-  main #works-contents #works-img #img-pc p {
-    text-align: center;
-  }
-  main #works-contents #works-img #img-pc img {
-    height: 300px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 0px 0px;
-       object-position: 0px 0px;
-  }
-  main #works-contents #works-img #img-sp {
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-  }
-  main #works-contents #works-img #img-sp p {
-    text-align: center;
-  }
-  main #works-contents #works-img #img-sp img {
-    height: 400px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 0px 0px;
-       object-position: 0px 0px;
-  }
-}
-main #works-contents #works-text {
-  padding-top: 80px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 30px;
-  width: 45%;
-}
-@media (max-width: 768px) {
-  main #works-contents #works-text {
-    width: 100%;
-  }
-}
-main #works-contents #works-text dl {
-  background: linear-gradient(220.55deg, #FFF6EB 0%, #DFD1C5 100%);
-  padding: 10px;
-  border-radius: 3px;
-  border: 2px solid #c6c6c6;
-  font-family: "Noto Sans JP", sans-serif;
-}
-main #works-contents #works-text dl dt {
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-main #works-contents #works-text dl dd {
-  padding-left: 20px;
-  margin-bottom: 30px;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-main #works-contents #works-text dl dd a {
-  color: #5faba8;
-}
-main #works-contents #works-text dl dd a:hover {
-  opacity: 0.8;
-  text-shadow: 1px 1px 8px #ffffff;
-}
-main .zoom-contents {
-  display: none;
-}
-main .zoom-contents .zoom-img {
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
   position: fixed;
-  top: 53%;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  z-index: 9999999;
+  text-align: center;
+  color: #fff;
+}
+
+#splash-logo {
+  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9;
-  width: 100%;
-  max-width: 470px;
 }
-main .zoom-contents .zoom-img img {
-  width: 100%;
-}
-main .zoom-contents .work-back {
-  position: fixed;
-  top: 0;
-  z-index: 8;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.549);
-}
-@media (max-width: 768px) {
-  main .zoom-contents .work-back {
-    height: 100%;
-  }
-}
-main .zoom-contents-sp {
+
+/*========= 画面遷移のためのCSS ===============*/
+/*画面遷移アニメーション*/
+.splashbg {
   display: none;
 }
-main .zoom-contents-sp .zoom-img {
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg {
+  display: block;
+  content: "";
   position: fixed;
-  top: 53.5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9;
-  width: 100%;
-  max-width: 115px;
-}
-main .zoom-contents-sp .zoom-img img {
-  width: 100%;
-}
-@media (max-width: 768px) {
-  main .zoom-contents-sp .zoom-img {
-    top: 53.5%;
-    max-width: 110px;
-  }
-}
-main .zoom-contents-sp .work-back {
-  position: fixed;
-  top: 0;
-  z-index: 8;
+  z-index: 999;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.549);
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  background-color: #333;
+  /*伸びる背景色の設定*/
+  animation-name: PageAnime;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
-@media (max-width: 768px) {
-  main .zoom-contents-sp .work-back {
-    height: 100%;
+
+@keyframes PageAnime {
+  0% {
+    transform-origin: bottom;
+    transform: scaleY(0);
   }
-}/*# sourceMappingURL=works_contents.css.map */
+  50% {
+    transform-origin: bottom;
+    transform: scaleY(1);
+  }
+  50.001% {
+    transform-origin: top;
+  }
+  100% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+}
+/*画面遷移の後現れるコンテンツ設定*/
+#container {
+  opacity: 0;
+  /*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container {
+  animation-name: PageAnimeAppear;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=splash.css.map */
