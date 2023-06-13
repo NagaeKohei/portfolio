@@ -1,1 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>KoheiNagaePortfolio</title>
+  <meta name="description" content="Webデザイナーを目指して独学で勉強している永江晃平です。このサイトは、私が初めて作成したポートフォリオサイトで、これまで身につけたスキルや制作したWebページなどをご覧いただけます。まだ未熟な点も多いですが、日々成長していきたいと思っています。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/6.4.0/css/font-awesome.min.css"> 
+  <link rel="stylesheet" href="../CSS/loader.css">
+  <link rel="stylesheet" href="../CSS/index.css">
+  <link rel="stylesheet" href="../CSS/top.css">
+  <link rel="stylesheet" href="../CSS/aboutme.css">
+  <link rel="stylesheet" href="../CSS/webskill.css">
+  <link rel="stylesheet" href="../CSS/woks.css">
+</head>
+<body>
+  <div id="loading">
+    <div class="loader"></div>
+  </div>
 
+    <header>
+      <div id="header-contents">
+        <div id="header-logo"><a href="#">KNPF</a></div>
+        <div id="header-menu">
+          <div class="hamburger"></div>
+          <p>MENU</p>
+        </div>
+        <div class="contact" id="header-contact">
+          <a href="#footer">Contact</a>
+        </div>
+      </div>
+      <div id="menu-list">
+        <ul>
+          <li><a href="#">Top</a></li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#skill">Web Skills</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <div id="menu-back">
+    </div>
+  
+    <main>
+      <!--タイトルと挨拶-->
+      <div id="top">
+        <h1><span>K</span>ohei <span>N</span>AGAE <span>P</span>ort<span>F</span>olio</h1>
+        <h2 class="h2-title">Top</h2>
+        <p>Thanks for visiting.<br>And relax while you watching.</p>
+        
+        <!--topの背景動画-->
+        <div class="video-container">
+          <video autoplay muted loop>
+            <source src="../img/topback.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div id="back-grad">
+        <!--私について-->
+        <div id="about-me">
+          <h2 class="h2-title">About Me</h2>
+          <div id="about-index">
+            <div id="about-myimg">
+              <img id="about-mainimg" src="../img/aboutme_main.jpg" alt="永江晃平の全身の写真">
+              <img id="about-subimg" src="../img/aboutme_sub (2).JPG" alt="永江晃平の顔の写真">
+            </div>
+            <div id="about-metext">
+              <p id="about-name">永江 晃平(ながえ こうへい)</p>
+              <p id="about-birth">1999年生まれ 東京在住</p>
+              <p id="whoami">
+                中学の頃からアニメやイラストが好きで、アートギャラリーやデザインの展示会に足を運んでいました。
+                2022年の時期の就活で異種業の企業の内定を頂いていましたが、本年初頭にデザインの仕事に携わりたいと強く思い
+                内定を辞退、独学でデザインとコーディングの学習を始めました。
+              </p>
+              <p id="learning">
+                第一印象で直感的に理解できる内容、アートのような視覚的悦びがある装飾、
+                UXを加速させるUIデザイン、コーディング側の考えも汲み取れるような実装への理解。
+                これら4つの項目をすべて満たすことが出来るのが、私の目指すデザイナーだと考えています。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--スキル-->
+        <div id="skill">
+          <h2 class="h2-title">Web Skill</h2>
+          <div id="skill-scroll">
+            <ul class="skill-list swiper-wrapper">
+              <li class="swiper-slide">
+                <img src="../img/skill_html3.jpg" alt="HTMLのロゴ画像です">
+                <div class="skill-text">
+                  <p class="skill-title">HTML</p>
+                  <p class="skill-explan">見やすく、WEBのイメージが出来る<br>様なコードを意識して書いています。</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <img src="../img/skill_css2.jpg" alt="CSSのロゴ画像です">
+                <div class="skill-text">
+                  <p class="skill-title">CSS3</p>
+                  <p class="skill-explan">レスポンシブデザインにも<br>対応出来ます。</p>
+                </div>            
+              </li>
+              <li class="swiper-slide">
+                <img src="../img/skill_java2.jpg" alt="JavaScriptのロゴ画像です">
+                <div class="skill-text">
+                  <p class="skill-title">JavaScript</p>
+                  <p class="skill-explan">鋭意勉強中ですが簡単な動きを<br>付けることが可能です。</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <img src="../img/skill_jQuery.jpg" alt="jQueryのロゴ画像です">
+                <div class="skill-text">
+                  <p class="skill-title">jQuery</p>
+                  <p class="skill-explan">WEBの動きは現在こちらを<br>主に用いており、様々なプラグイン<br>のカスタマイズが出来ます。</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <img src="../img/skill_scss.jpg" alt="Scssのロゴ画像です">
+                <div class="skill-text">
+                  <p class="skill-title">Scss</p>
+                  <p class="skill-explan">CSSを理解した上で作業の<br>高効率化を満たすことが出来ます。</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <img src="../img/skill_photoshop.jpg" alt="Photoshopのロゴ画像です">
+                <div class="skill-text">
+                  <p class="skill-title">PhotoShop</p>
+                  <p class="skill-explan">勉強中ですが、簡単な<br>加工を行うことが出来ます。</p>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <img src="../img/skill_github.jpg" alt="GitHubのロゴ画像です">
+                <div class="skill-text">
+                  <p class="skill-title">GitHub</p>
+                  <p class="skill-explan">コーダー同士のプログラム編集の<br>迅速な確認作業を行えます。</p>
+                </div>            
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--作品-->
+        <div id="works">
+          <h2 class="h2-title">Works</h2>
+          <div></div>
+          <ul id="works-list">
+            <li class="works-contents">
+              <div class="works-img"><img src="../img/works/kissa/サムネ.png" alt="とある喫茶店のWEBサイトです。"></div>
+              <div class="works-text">
+                <p>架空の喫茶店のWEBサイト</p>
+                <button> <a href="../HTML/works/kissa.html">View More
+                  <span></span></a>
+                </button>
+              </div>
+            </li>
+            <li class="works-contents">
+              <div class="works-img"><img src="../img/works/bicycle/サムネ.png" alt="自転車紹介の為のWEBサイトです。"></div>
+              <div class="works-text">
+                <p>自転車紹介のWEBサイト</p>
+                <button> <a href="../HTML/works/bicycle.html">View More
+                  <span></span></a>
+                </button>
+              </div>
+            </li>
+            <li class="works-contents">
+              <div class="works-img"><img src="../img/works/photo/サムネ.png" alt="フォトグラファーのポートフォリオサイトです。"></div>
+              <div class="works-text">
+                <p>フォトグラファーのポートフォリオサイト</p>
+                <button> <a href="../HTML/works/photo.html">View More
+                  <span></span></a>
+                </button>
+              </div>
+            </li>
+            <li class="works-contents">
+              <div class="works-img"><img src="../img/works/totally/サムネ.png" alt="アパレルブランドのECサイトです。"></div>
+              <div class="works-text">
+                <p>アパレルブランドのECサイト</p>
+                <button> <a href="../HTML/works/tottaly.html">View More
+                  <span></span></a>
+                </button>
+              </div>
+            </li>
+            <li class="works-contents">
+              <div class="works-img"><img src="../img/works/WED/サムネ.png" alt="架空の会社のコーポレートサイトです。"></div>
+              <div class="works-text">
+                <p>架空のWEB会社のコーポレートサイト</p>
+                <button> <a href="../HTML/works/wed.html">View More
+                  <span></span></a>
+                </button>
+              </div>
+            </li>
+            <li class="works-contents">
+              <div class="works-img"><img src="../img/works/Blog/サムネ.png" alt="旅行記事のサイトです。"></div>
+              <div class="works-text">
+                <p>旅行記事のブログサイト</p>
+                <button> <a href="../HTML/works/travel.html">View More
+                  <span></span></a>
+                </button>
+              </div>
+            </li>
+            <li class="works-contents">
+              <div class="works-img"><img src="../img/works/isara/サムネ.png" alt="エンジニア養成講座の募集サイトです。"></div>
+              <div class="works-text">
+                <p>エンジニア養成講座の募集サイト</p>
+                <button> <a href="../HTML/works/isara.html">View More
+                  <span></span></a>
+                </button>
+              </div>
+            </li>
+            <li class="works-contents">
+              <div class="works-img"><img src="../img/works/house/サムネ.png" alt="ハウスメーカーのコーポレートサイトです。"></div>
+              <div class="works-text">
+                <p>ハウスメーカーのコーポレートサイト</p>
+                <button> <a href="../HTML/works/house.html">View More
+                  <span></span></a>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div id="footer-contact" class="card">
+        <div class="content">
+            <div class="front">
+                <h3 class="title">Contact</h3>
+                <p class="subtitle">ポートフォリオをご覧いただきありがとうございます。このサイトは私がこれまで独学で習得したやスキルや作品を紹介するために作成しました。<br>
+                  私の作品や経歴に興味を持ってくださった方、こちらからでもお問い合わせいただけます。ご連絡お待ちしています。</p>
+            </div>
+
+            <div class="back">
+              <div id="contact">
+                <button class="cta">
+                  <span><a href="mailto:info@example.com?subject=ポートフォリオサイト拝見しての連絡">Here You Can Contact Me By E-mail.</a></span>
+                  <svg viewBox="0 0 13 10" height="10px" width="15px">
+                    <path d="M1,5 L11,5"></path>
+                    <polyline points="8 1 12 5 8 9"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div id="footer-contact-sp">
+        <div class="content-sp">
+            <h3 class="title">Contact</h3>
+            <p class="subtitle">ポートフォリオをご覧いただきありがとうございます。このサイトは私がこれまで独学で習得したやスキルや作品を紹介するために作成しました。<br>
+              私の作品や経歴に興味を持ってくださった方は、下記のボタンからでもお問い合わせいただけます。ご連絡お待ちしています。</p>
+        </div>
+        <div id="contact-sp">
+          <button class="cta">
+            <span><a href="mailto:info@example.com?subject=ポートフォリオサイト拝見しての連絡">Here You Can Contact Me By E-mail.</a></span>
+            <svg viewBox="0 0 13 10" height="10px" width="15px">
+              <path d="M1,5 L11,5"></path>
+              <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+ 
+      <div id="copylight">
+        <p>&copy;2023</p>
+        <p>Kohei NAGAE</p>
+      </div>
+    </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js"></script>
+  <script src="../Java/loader.js"></script>
+  <script src="../Java/menutoggle.js"></script>
+  <script src="../Java/topvideo.js"></script>
+  <script src="../Java/skill_scroll.js"></script>
+  <script src="../Java/work_scroll.js"></script>
+</body>
+</html>
