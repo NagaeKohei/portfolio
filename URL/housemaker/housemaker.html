@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>明るいHOUSE</title>
+  <meta name="description" content="テキストテキストテキストテキストテキストテキスト">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/housemaker.css">
+  <link rel="icon" href="./img/favicon.ico">
+</head>
+<body>
+  <header>
+      <a href="#"><img src="./img/logo.svg" alt="ヘッダーロゴ"></a>
+      <button id="hamburger-button"><div id="hamburger-menu"></div></button>
+      <div id="contents-header">
+      <div id="header-menu">
+        <ul>
+          <li><a href="#">私たちについて</a></li>
+          <li><a href="#">サービス</a></li>
+          <li><a href="#">商品情報</a></li>
+          <li><a href="#">展示会</a></li>
+          <li><a href="#">暮らしの日記</a></li>
+          <li><a href="#">会社概要</a></li>
+        </ul>
+      </div>
+      <div id="header-link">
+        <ul class="link">
+          <li><a href="https://twitter.com/home">Twitter</a></li>
+          <li><a href="https://www.facebook.com/">facebook</a></li>
+          <li><a href="https://www.instagram.com/">instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <div id="hamburger-list">
+    <div id="sp-menu">
+      <ul class="menu">
+        <li><a href="#">私たちについて</a></li>
+        <li><a href="#">サービス</a></li>
+        <li><a href="#">商品情報</a></li>
+        <li><a href="#">展示会</a></li>
+        <li><a href="#">暮らしの日記</a></li>
+        <li><a href="#">会社概要</a></li>
+      </ul>
+
+      <ul class="link menu">
+        <li><a href="https://twitter.com/home">Twitter</a></li>
+        <li><a href="https://www.facebook.com/">facebook</a></li>
+        <li><a href="https://www.instagram.com/">instagram</a></li>
+      </ul>
+    </div>
+    <div id="close"></div>
+  </div>
+
+  <div id="video-back">
+    <div id="video-area">
+      <video id="video" poster="./img/black-bord.jpg" webkit-playsinline playsinline muted autoplay loop>
+        <!--
+        poster：動画ファイルが利用できない環境で代替表示される画像
+        webkit-playsinline：iOS 9までのSafari用インライン再生指定
+        playsinline：iOS 10以降のSafari用インライン再生指定
+        muted：音声をミュートさせる
+        autoplay：動画を自動再生させる
+        loop：動画をループさせる
+        controls：コントロールバーを表示する
+        -->
+        <source src="./img/process.mp4" type="video/mp4">
+      </video>
+      <!--/video-area-->
+    </div>
+  </div>
+
+  <main>
+
+    <section class="contents">
+      <div id="introduction">
+        <h2 class="title">建築事例をご紹介</h2>
+        <ul id="intro-img">
+          <li><img src="./img/project1.jpg" alt="紹介画像1"><p>PROJECT_01</p></li>
+          <li><img src="./img/project2.jpg" alt="紹介画像2"><p>PROJECT_02</p></li>
+          <li><img src="./img/project3.jpg" alt="紹介画像3"><p>PROJECT_03</p></li>
+          <li><img src="./img/project4.jpg" alt="紹介画像4"><p>PROJECT_04</p></li>
+        </ul>
+      </div>
+      <div id="feature">
+        <h2 class="title">明るいHOUSEの特徴</h2>
+        <ul>
+          <li>
+            <div class="feature-circle">
+              <a href="#">design</a>
+            </div>
+            <p class="feature-point">デザイン</p>
+            <p class="feature-text">テキストテキストテキスト</p>
+          </li>
+          <li>
+            <div class="feature-circle">
+              <a href="#">quality</a>
+            </div>
+            <p class="feature-point">性能</p>
+            <p class="feature-text">テキストテキストテキスト</p>
+          </li>
+          <li>
+            <div class="feature-circle">
+              <a href="#">support</a>
+            </div>
+            <p class="feature-point">サポート</p>
+            <p class="feature-text">テキストテキストテキスト</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <article id="back-white">
+      <section class="contents">
+        <div id="content-flow" class="contents">
+          <h2 class="title">家ができるまでの流れ</h2>
+          <p class="attention">お問い合わせいただいてから、家が完成するまでの流れです。</p>
+          <div id="flow">
+            <div id="flow-img">
+              <div class="connection">
+                <p>1.ヒアリング</p>
+              </div>
+              <div class="connection">
+                <p>2.プラン提案</p>
+              </div>
+              <div class="connection">
+                <p>3.契約</p>
+              </div>
+              <div class="connection">
+                <p>4.着工</p>
+              </div>
+              <div class="connection">
+                <p>5.完成</p>
+              </div>
+            </div>
+            <div id="flow-text">
+              <ul>
+                <li>
+                  <p class="number">1</p>
+                  <div class="flow-detail">
+                    <h3>ヒアリング</h3>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="number">2</p>
+                  <div class="flow-detail">
+                    <h3>プラン提案</h3>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="number">3</p>
+                  <div class="flow-detail">
+                    <h3>契約</h3>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="number">4</p>
+                  <div class="flow-detail">
+                    <h3>着工</h3>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="number">5</p>
+                  <div class="flow-detail">
+                    <h3>完成</h3>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキスト テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="contact" class="contents">
+          <h2 class="title">お問い合わせ</h2>
+          <p class="attention">お問い合わせは下記からお願いいたします。</p>
+          <ul>
+            <a href="#">
+              <li>
+                <img src="./img/icon-document.png" alt="資料請求画像">
+                <p>資料請求</p>
+              </li>
+            </a>
+            <a href="#">
+              <li>
+                <img src="./img/icon-seminar.png" alt="説明会画像">
+                <p>Web説明会</p>
+              </li>
+            </a>
+            <a href="#">
+              <li>
+                <img src="./img/icon-talk.png" alt="相談画像">
+                <p>個別相談</p>
+              </li>
+            </a>
+          </ul>
+        </div>
+      </section>
+    </article>
+
+    <footer>
+      <div id="footer-menu" class="contents">
+        <ul>
+          <li><a href="#">私たちについて</a></li>
+          <li><a href="#">サービス</a></li>
+          <li><a href="#">商品情報</a></li>
+          <li><a href="#">展示会</a></li>
+          <li><a href="#">暮らしの日記</a></li>
+          <li><a href="#">会社概要</a></li>
+        </ul>
+      </div>
+      <p>Copyright &copy; 2021 Akarui HOUSE All Rights Reserved.</p>
+    </footer>
+
+  </main>
+  <div id="scroll-top" class="target">
+    <a href="#"></a>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./js/scrolltop.js"></script>
+  <script src="./js/tophiddenbutton.js"></script>
+  <script src="./js/hamburgermenu.js"></script>
+</body>
+</html>
