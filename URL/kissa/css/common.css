@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;/* 要素の幅高さ設定 */
+}
+
+ul,
+ol {
+  list-style: none; /* 各リストの「・」を非表示 */
+}
+
+a {/* リンクの設定 */
+  color: inherit;/* リンク文字の色を親要素と同じ色に */
+  text-decoration: none;/* リンク文字の下線部を非表示に */
+}
+
+body {
+  font-family: sans-serif;/* テキストフォントの指定 */
+  font-size: 16px;
+  color: #000;
+  line-height: 1;/* 行間を1に */
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;/* 画像の最大幅を100％に指定 */
+}
+
+.header-inner {/* ヘッダーの設定 */
+  max-width: 1200px;
+  height: 110px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;/* ロゴとメニューを左右に寄せて配置 */
+  align-items: center;/* 中央揃えに */
+}
+
+.toggle-menu-button {/* ボタンの非表示 */
+  display: none;
+}
+
+.header-logo {/* ヘッダーロゴの設定 */
+  display: block;
+  width: 170px;
+}
+
+.site-menu ul {/* メニューを横並びに */
+  display: flex;
+}
+
+.site-menu ul li {/* メニューの余白間隔の設定 */
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.site-menu ul li a {
+  font-family: 'Montserrat', sans-serif;/* メニューフォントの変更 */
+  font-weight: bold;
+}
+
+footer {
+  color: #fff;/* 文字を白色に */
+  background-color: #24211b;/* 背景を黒に */
+  padding-top: 30px;
+  padding-bottom: 15px;
+  display: flex;/* フッター要素を縦に表示するために1度横並びにさせる */
+  flex-direction: column;/* フッター要素の表示を縦方向に */
+  align-items: center;/* フッターの各要素を中央揃えに */
+}
+
+.footer-logo {/* フッターロゴの設定 */
+  display: block;
+  width: 235px;
+  margin-top: 90px;
+}
+
+.footer-tel {/* 電話番号の設定 */
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 28px;
+}
+
+.footer-time {/* 開店時間の設定 */
+  font-size: 13px;
+  margin-top: 16px;
+}
+
+.copyright {/* @KISSAマークの設定 */
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 90px;
+}
+
+@media (max-width: 800px) {/* ブラウザ表示幅800px以下時に以下のコードが適用 */
+  .site-menu ul {
+    display: block;/* ディスプレイプロパティをブロックに設定 */
+    text-align: center;/* テキストを中央揃えに */
+  }
+
+  .site-menu li {
+    margin-top: 20px;/*各メニュー上部の余白を20pxに*/
+  }
+
+  .header {
+    position: fixed;/* ヘッダーを固定 */
+    top: 0;
+    left: 0;
+    right: 0;/* 固定位置を指定 */
+    background-color: #fff;
+    height: 50px;
+    z-index: 10;/* 重なりの優先順位を10に */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);/* 影の作成 */
+  }
+
+  .header-inner {/* ヘッダー内部のサイズを調整 */
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    position: relative;/* 位置指定の変更 */
+  }
+  
+  .header-logo {/* ヘッダーのロゴ */
+    width: 100px;/* サイズの変更 */
+  }
+
+  .header-site-menu {/* メニューの土台を作成 */
+    position: absolute;/* 位置の指定指定 */
+    top: 100%;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background-color: rgba(44, 41, 32, 0.97);
+    padding-top: 30px;
+    padding-bottom: 50px;
+    display: none;
+  }
+
+  .header-site-menu.is-show {/* ボタンタップによりメニューのポップアップを指定 */
+    display: block;
+  }
+
+  .toggle-menu-button {/* ハンバーガーメニューボタンの作成 */
+    display: block;/* ディスプレイにボタンを表示 */
+    width: 44px;
+    height: 34px;/* ボタンの大きさを幅44px、高さ34pxに */
+    background-image: url(../images/common/icon-menu.png);/* ハンバーガーメニューアイコン画像を設置 */
+    background-size: 50%;/* 表示サイズを素画像の半分に */
+    background-position: center;/* 背景画像位置を中央に */
+    background-repeat: no-repeat;/* 画像の繰り返しを解除 */
+    background-color: transparent;/* 背景色を透明に */
+    border: none;/* 境界線を削除 */
+    border-radius: 0;/* 角を丸みを解除 */
+    outline: none;/* タップ時の枠線表示の削除 */
+  }
+
+  .main {
+    padding-top: 50px;/* メイン要素の上部余白を50pxに。それによりヘッダー高さ分の余白が確保されフッターのか売れてた部分が見える */
+  }
+
+  .footer-logo{
+    margin-top: 60px;/* フッターロゴの上部余白を60pxに */
+  }
+
+  .footer-tel{
+    font-size: 20px;/* 電話番号のフォントサイズを20pxに */
+  }
+
+  .copyright{
+    margin-top: 50px;/* フッターの＠KISSAの上部余白を50pxに */
+  }
+}
