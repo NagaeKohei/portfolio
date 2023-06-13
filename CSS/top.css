@@ -1,0 +1,103 @@
+@charset "UTF-8";
+/* スクロールの動きをスムーズにする */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 要素の幅と高さにpaddingと線の太さを含める */
+* {
+  box-sizing: border-box;
+}
+
+/* スクロールバーの見た目をカスタマイズする */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.h2-title {
+  font-size: 2rem;
+  padding-left: 35px;
+  position: relative;
+  color: white;
+}
+.h2-title::before, .h2-title::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background-color: #ffffff;
+  top: 18px;
+}
+.h2-title::before {
+  left: 0;
+}
+.h2-title::after {
+  left: 100px;
+}
+
+main #top {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+main #top h1 {
+  width: 740px;
+  font-size: 10rem;
+  color: white;
+}
+main #top h1 span {
+  color: rgb(255, 77, 77);
+}
+main #top p {
+  font-size: 1.7rem;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+}
+main #top .video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+main #top .video-container video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1); /* ここで動画を1.5倍に拡大 */
+}
+@media (max-width: 768px) {
+  main #top {
+    padding-top: 100px;
+    padding-bottom: 15px;
+    height: 100vh;
+  }
+  main #top h1 {
+    width: 100%;
+    font-size: 4.5rem;
+    padding-bottom: 30px;
+    line-height: 100px;
+  }
+  main #top p {
+    margin-top: 80px;
+    font-size: 1.2rem;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+}/*# sourceMappingURL=top.css.map */
