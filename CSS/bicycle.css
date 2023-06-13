@@ -1,0 +1,207 @@
+@charset "UTF-8";
+/* スクロールの動きをスムーズにする */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 要素の幅と高さにpaddingと線の太さを含める */
+* {
+  box-sizing: border-box;
+}
+
+/* スクロールバーの見た目をカスタマイズする */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+main {
+  position: relative;
+  background-color: #dedfc8;
+}
+main #works-contents {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  main #works-contents {
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+main #works-contents #works-img {
+  width: 49%;
+  display: flex;
+  justify-content: space-between;
+}
+main #works-contents #works-img #img-pc {
+  width: 59%;
+}
+main #works-contents #works-img #img-pc p {
+  font-size: 1.2rem;
+}
+main #works-contents #works-img #img-sp {
+  width: 40%;
+}
+main #works-contents #works-img #img-sp p {
+  font-size: 1.2rem;
+}
+main #works-contents #works-img img {
+  width: 100%;
+  border: 2px solid #c6c6c6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  main #works-contents #works-img {
+    width: 100%;
+    flex-direction: column;
+  }
+  main #works-contents #works-img #img-pc {
+    width: 100%;
+  }
+  main #works-contents #works-img #img-pc p {
+    text-align: center;
+  }
+  main #works-contents #works-img #img-pc img {
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0px 0px;
+       object-position: 0px 0px;
+  }
+  main #works-contents #works-img #img-sp {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+  main #works-contents #works-img #img-sp p {
+    text-align: center;
+  }
+  main #works-contents #works-img #img-sp img {
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0px 0px;
+       object-position: 0px 0px;
+  }
+}
+main #works-contents #works-text {
+  padding-top: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  width: 45%;
+}
+@media (max-width: 768px) {
+  main #works-contents #works-text {
+    width: 100%;
+  }
+}
+main #works-contents #works-text dl {
+  background: linear-gradient(220.55deg, #FFF6EB 0%, #DFD1C5 100%);
+  padding: 10px;
+  border-radius: 3px;
+  border: 2px solid #c6c6c6;
+  font-family: "Noto Sans JP", sans-serif;
+}
+main #works-contents #works-text dl dt {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+main #works-contents #works-text dl dd {
+  padding-left: 20px;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+main #works-contents #works-text dl dd a {
+  color: #5faba8;
+}
+main #works-contents #works-text dl dd a:hover {
+  opacity: 0.8;
+  text-shadow: 1px 1px 8px #ffffff;
+}
+main .zoom-contents {
+  display: none;
+}
+main .zoom-contents .zoom-img {
+  position: fixed;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  width: 100%;
+  max-width: 560px;
+}
+main .zoom-contents .zoom-img img {
+  width: 100%;
+}
+main .zoom-contents .work-back {
+  position: fixed;
+  top: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.549);
+}
+@media (max-width: 768px) {
+  main .zoom-contents .work-back {
+    height: 100%;
+  }
+}
+main .zoom-contents-sp {
+  display: none;
+}
+main .zoom-contents-sp .zoom-img {
+  position: fixed;
+  top: 53.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+  width: 100%;
+  max-width: 350px;
+}
+main .zoom-contents-sp .zoom-img img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  main .zoom-contents-sp .zoom-img {
+    top: 53.5%;
+    max-width: 350px;
+  }
+}
+main .zoom-contents-sp .work-back {
+  position: fixed;
+  top: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.549);
+}
+@media (max-width: 768px) {
+  main .zoom-contents-sp .work-back {
+    height: 100%;
+  }
+}/*# sourceMappingURL=bicycle.css.map */
