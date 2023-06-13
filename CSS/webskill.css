@@ -1,0 +1,111 @@
+#skill {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+@media (max-width: 768px) {
+  #skill {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+#skill .h2-title {
+  color: #393939;
+  text-align: center;
+}
+#skill .h2-title::before, #skill .h2-title::after {
+  background-color: #393939;
+}
+#skill .h2-title::before {
+  left: 50%;
+  margin-left: -100px;
+}
+#skill .h2-title::after {
+  left: 50%;
+  margin-left: 100px;
+}
+#skill #skill-scroll {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-top: 40px;
+  cursor: grab;
+}
+@media (max-width: 768px) {
+  #skill #skill-scroll {
+    margin-top: 30px;
+  }
+}
+#skill #skill-scroll:active {
+  cursor: grabbing;
+}
+#skill #skill-scroll .skill-list {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  transition-timing-function: linear;
+}
+#skill #skill-scroll .skill-list li {
+  width: 300px !important;
+  height: 350px !important;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  margin-left: 0.4%;
+  background-color: #f8d8db;
+}
+@media (max-width: 768px) {
+  #skill #skill-scroll .skill-list li {
+    width: 240px !important;
+    height: 240px !important;
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+}
+#skill #skill-scroll .skill-list li img {
+  display: block;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 768px) {
+  #skill #skill-scroll .skill-list li img {
+    width: 85px;
+  }
+}
+#skill #skill-scroll .skill-list li .skill-text {
+  margin-top: 24px;
+  text-align: center;
+}
+#skill #skill-scroll .skill-list li .skill-text .skill-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#skill #skill-scroll .skill-list li .skill-text .skill-explan {
+  margin-top: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.9rem;
+  overflow-wrap: break-word;
+}
+@media (max-width: 768px) {
+  #skill #skill-scroll .skill-list li .skill-text {
+    margin-top: 10px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #skill #skill-scroll .skill-list li .skill-text .skill-title {
+    font-size: 1.1rem;
+  }
+  #skill #skill-scroll .skill-list li .skill-text .skill-explan {
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes loop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=webskill.css.map */
