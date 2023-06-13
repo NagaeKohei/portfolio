@@ -1,0 +1,1949 @@
+@charset "UTF-8";
+.circle {
+  margin: 0 auto;
+  position: relative;
+  width: 950px;
+  max-width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+.circle::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-top: 5px solid #ebb94d;
+  border-left: 5px solid #ebb94d;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.circle::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-right: 5px solid #ebb94d;
+  border-bottom: 5px solid #ebb94d;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+* {
+  color: #333;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+  letter-spacing: 1px;
+}
+* a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body header {
+  background-color: white;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+body header #head-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 15px 1%;
+}
+body header #head-title #title {
+  display: flex;
+  align-items: end;
+}
+body header #head-title #title img {
+  width: 140px;
+}
+body header #head-title #title p {
+  margin-bottom: 0;
+  font-weight: 600;
+  margin-left: 7px;
+}
+body header #head-title #form-text {
+  background-color: #da6b64;
+  border-radius: 90px;
+  border: none;
+}
+body header #head-title #form-text a {
+  display: inline-block;
+  color: white;
+  padding: 11px 47px;
+}
+body header #head-title #form-text:hover {
+  background-color: #cf2e2e;
+}
+body header #head-title #form-img {
+  display: none;
+  background-color: #da6b64;
+}
+body header #head-title #form-img a {
+  display: inline-block;
+  padding: 11px;
+  color: white;
+}
+body header #head-title #form-img a img {
+  width: 40%;
+}
+@media (max-width: 1190px) {
+  body header #head-title {
+    font-size: 0.85rem;
+  }
+  body header #head-title p, body header #head-title #form-text {
+    letter-spacing: 0;
+  }
+  body header #head-title #form-text a {
+    padding: 12px 42px;
+  }
+}
+@media (max-width: 768px) {
+  body header #head-title {
+    padding: 0;
+  }
+  body header #head-title #title {
+    flex-direction: column-reverse;
+  }
+  body header #head-title #title img {
+    margin-right: 100px;
+    width: 90px;
+  }
+  body header #head-title #title p {
+    font-size: 0.7rem;
+    text-align: left;
+  }
+  body header #head-title #form-text {
+    display: none;
+  }
+  body header #head-title #form-img {
+    display: block;
+  }
+}
+body main {
+  text-align: center;
+  padding-top: 78px;
+}
+body main #mainvisual {
+  background-image: url(../img/main.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 130px 0;
+}
+body main #mainvisual h2 {
+  font-weight: 600;
+  line-height: 50px;
+  font-size: 1.9rem;
+}
+body main #mainvisual img {
+  width: 20%;
+}
+body main #mainvisual p {
+  font-weight: 600;
+  margin-top: 40px;
+  font-size: 1.5rem;
+  line-height: 25px;
+}
+@media (max-width: 1190px) {
+  body main #mainvisual h2 {
+    font-size: 1.7rem;
+  }
+  body main #mainvisual img {
+    width: 40%;
+  }
+  body main #mainvisual p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #mainvisual {
+    background-image: url(../img/mainsp.jpg);
+    padding: 20px 0;
+  }
+  body main #mainvisual h2 {
+    font-size: 1.3rem;
+    line-height: 30px;
+  }
+  body main #mainvisual img {
+    width: 50%;
+    margin-top: 10px;
+  }
+  body main #mainvisual p {
+    line-height: 18px;
+  }
+}
+body main #content {
+  background-color: #ebb94d;
+  padding: 30px 0;
+  font-weight: 600;
+}
+body main #content p {
+  color: white;
+  font-size: 1.5rem;
+}
+body main #content p span {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+body main #content button {
+  margin-top: 40px;
+  background-color: #da6b64;
+  border-radius: 100px;
+  border: none;
+}
+body main #content button:hover {
+  background-color: #cf2e2e;
+}
+body main #content button a {
+  display: block;
+  padding: 30px 300px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: line-through;
+}
+body main #content button a #content-brsp {
+  display: none;
+}
+body main #content ul {
+  list-style: none;
+  margin-top: 50px;
+}
+body main #content ul li {
+  margin-top: 20px;
+}
+body main #content #sns {
+  margin-top: 40px;
+}
+body main #content #sns #twitter {
+  height: 20px;
+  box-sizing: border-box;
+  padding: 1px 12px 1px 12px;
+  background-color: #1d9bf0;
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 500;
+  cursor: pointer;
+}
+body main #content #sns #twitter i {
+  color: white;
+}
+body main #content #sns #nice,
+body main #content #sns #share {
+  background-color: rgb(55, 112, 211);
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+@media (max-width: 1190px) {
+  body main #content p {
+    font-size: 1.2rem;
+  }
+  body main #content button {
+    margin-top: 3px;
+  }
+  body main #content button a {
+    font-size: 1.2rem;
+    padding: 25px 220px;
+  }
+  body main #content ul {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 768px) {
+  body main #content {
+    padding: 20px 0;
+  }
+  body main #content p {
+    font-size: 1.1rem;
+  }
+  body main #content p span {
+    line-height: 30px;
+  }
+  body main #content button {
+    width: 90%;
+  }
+  body main #content button a {
+    padding: 3% 10%;
+  }
+  body main #content button a #content-brsp {
+    display: block;
+  }
+}
+body main #content2 {
+  background-image: url(../img/introbottom.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 40px 0 190px 0;
+}
+@media (max-width: 768px) {
+  body main #content2 {
+    padding: 30px 0 55px 0;
+    height: inherit;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center bottom;
+  }
+}
+body main #content2 h2 {
+  font-weight: 600;
+  padding: 37px 60px;
+}
+@media (max-width: 768px) {
+  body main #content2 h2 {
+    font-size: 20px;
+    line-height: 40px;
+    padding: 20px 40px;
+  }
+}
+body main #content2 #content2-text {
+  margin-top: 30px;
+  font-size: 1.4rem;
+}
+body main #content2 #content2-text p {
+  margin-top: 20px;
+}
+body main #content2 #content2-text p span {
+  font-weight: 600;
+  background: linear-gradient(transparent 70%, #ebb94d 70%);
+}
+@media (max-width: 1190px) {
+  body main #content2 #content2-text p {
+    font-size: 1.1rem;
+    margin-top: 35px;
+  }
+}
+@media (max-width: 768px) {
+  body main #content2 #content2-text p {
+    width: 80%;
+    margin: 35px auto;
+  }
+}
+body main #about {
+  background-color: #fef5e0;
+  padding-bottom: 40px;
+}
+body main #about #about-title {
+  position: relative;
+  top: -44px;
+  display: inline-block;
+  background-color: #ebb94d;
+  color: white;
+  width: 90px;
+  height: 90px;
+  padding-top: 33px;
+  border-radius: 100px;
+}
+body main #about h2 {
+  font-weight: 600;
+  padding: 40px;
+}
+@media (max-width: 768px) {
+  body main #about h2 {
+    font-size: 1.2rem;
+  }
+}
+body main #about #about-explan {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-top: 40px;
+}
+@media (max-width: 1190px) {
+  body main #about #about-explan {
+    font-size: 1.2rem;
+  }
+}
+body main #about #about-skill {
+  background-color: white;
+  border: 2px solid #ebb94d;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1190px;
+  margin: 30px auto;
+  padding: 20px 0 30px 0;
+}
+@media (max-width: 1190px) {
+  body main #about #about-skill {
+    width: 95%;
+  }
+}
+body main #about #about-skill h3 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin: 10px 0 39px 0;
+}
+body main #about #about-skill h3 #about-brsp {
+  display: none;
+}
+body main #about #about-skill ul {
+  max-width: 850px;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 10px;
+}
+@media (max-width: 1190px) {
+  body main #about #about-skill ul {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  body main #about #about-skill h3 {
+    font-size: 1.1rem;
+  }
+  body main #about #about-skill h3 #about-brsp {
+    display: block;
+  }
+  body main #about #about-skill li img {
+    width: 40px;
+  }
+  body main #about #about-skill li p {
+    font-size: 0.8rem;
+  }
+}
+body main #content3 {
+  background-image: url(../img/aboutsecondbg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  body main #content3 {
+    background-image: url(../img/aboutsecondbgsp.jpg);
+  }
+}
+body main #content3 #content3-text h2, body main #content3 #content3-text p {
+  color: white;
+  font-weight: 600;
+}
+body main #content3 #content3-text h2 {
+  padding-top: 40px;
+}
+body main #content3 #content3-text p {
+  font-size: 1.4rem;
+  margin-top: 30px;
+}
+body main #content3 #content3-text p span {
+  color: #ebb94d;
+}
+@media (max-width: 1190px) {
+  body main #content3 #content3-text h2 {
+    font-size: 1.7rem;
+  }
+  body main #content3 #content3-text p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #content3 #content3-text h2 {
+    font-size: 1.3rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+  body main #content3 #content3-text p {
+    font-size: 0.9rem;
+    width: 60%;
+    margin: 30px auto;
+  }
+}
+body main #content3 ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+@media (max-width: 1190px) {
+  body main #content3 ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  body main #content3 ul {
+    padding-left: 0;
+  }
+}
+body main #content3 ul li {
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 15px;
+  width: 25%;
+  font-weight: 600;
+}
+body main #content3 ul li .step-title {
+  background-color: #ebb94d;
+  color: white;
+  margin: 40px auto;
+  width: 80%;
+  font-size: 1.1rem;
+  border-radius: 3px;
+}
+body main #content3 ul li .step-text {
+  font-size: 1.1rem;
+  padding-bottom: 15px;
+}
+@media (max-width: 1190px) {
+  body main #content3 ul li {
+    width: 40%;
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 768px) {
+  body main #content3 ul li {
+    width: 90%;
+    margin-left: 0;
+  }
+  body main #content3 ul li .step-title {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+  body main #content3 ul li .step-month {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+  body main #content3 ul li .step-text {
+    font-size: 0.9rem;
+    padding-bottom: 0;
+  }
+}
+body main #content4 {
+  padding: 40px 0;
+  text-align: center;
+  background-color: #016ea9;
+}
+@media (max-width: 1190px) {
+  body main #content4 {
+    padding-bottom: 30px;
+  }
+}
+body main #content4 p {
+  color: white;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+body main #content4 p span {
+  color: #ebb94d;
+}
+@media (max-width: 1190px) {
+  body main #content4 p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #content4 p {
+    font-size: 0.85rem;
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+body main #content5 {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+@media (max-width: 768px) {
+  body main #content5 {
+    padding-top: 30px;
+  }
+}
+body main #content5 h2 {
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+body main #content5 h2 span {
+  font-size: 1rem;
+}
+@media (max-width: 1190px) {
+  body main #content5 h2 {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #content5 h2 {
+    font-size: 1.2rem;
+  }
+}
+body main #content5 #content5-text {
+  margin-top: 60px;
+  font-size: 1.4rem;
+}
+body main #content5 #content5-text #content5-brsp {
+  display: none;
+}
+@media (max-width: 1190px) {
+  body main #content5 #content5-text {
+    margin-top: 40px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+}
+@media (max-width: 768px) {
+  body main #content5 #content5-text #content5-brsp {
+    display: block;
+  }
+}
+body main #content5 ul {
+  width: 1000px;
+  margin: 40px auto;
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+  justify-content: space-evenly;
+}
+body main #content5 ul li {
+  width: 20%;
+}
+body main #content5 ul li img {
+  width: 100%;
+}
+@media (max-width: 1190px) {
+  body main #content5 ul {
+    width: 95%;
+  }
+}
+@media (max-width: 768px) {
+  body main #content5 ul {
+    flex-wrap: wrap;
+    width: 70%;
+  }
+  body main #content5 ul li {
+    width: 50%;
+    padding: 2%;
+  }
+}
+body main #content5 #content5-end {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+@media (max-width: 1190px) {
+  body main #content5 #content5-end {
+    margin-top: 70px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #content5 #content5-end {
+    margin-top: 30px;
+  }
+}
+body main #content6 {
+  background-color: #fef5e0;
+  padding: 60px 0;
+}
+body main #content6 #content6-circle p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding-top: 20px;
+}
+body main #content6 #content6-circle h2 {
+  font-weight: 600;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+}
+@media (max-width: 1190px) {
+  body main #content6 #content6-circle {
+    width: 88%;
+    max-width: 950px;
+  }
+  body main #content6 #content6-circle p {
+    font-size: 1.1rem;
+  }
+  body main #content6 #content6-circle h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 1190px) and (max-width: 768px) {
+  body main #content6 #content6-circle {
+    width: 95%;
+  }
+  body main #content6 #content6-circle p {
+    font-size: 1rem;
+  }
+  body main #content6 #content6-circle h2 {
+    font-size: 1.2rem;
+  }
+}
+body main #content6 ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 1300px;
+  margin: 40px auto;
+  padding-left: 0;
+}
+body main #content6 ul li {
+  width: 31%;
+  text-align: left;
+}
+body main #content6 ul li img {
+  width: 100%;
+}
+body main #content6 ul li h3 {
+  font-size: 1.4rem;
+  color: #ebb94d;
+  font-weight: 600;
+  padding-top: 15px;
+}
+body main #content6 ul li p {
+  padding-top: 10px;
+  font-size: 1.1rem;
+}
+@media (max-width: 1190px) {
+  body main #content6 ul {
+    width: 88%;
+  }
+}
+@media screen and (max-width: 1190px) and (max-width: 950px) {
+  body main #content6 ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  body main #content6 ul li {
+    width: 85%;
+  }
+  body main #content6 ul li img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  body main #content6 ul li h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  body main #content6 ul li p {
+    font-size: 0.9rem;
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  body main #content6 ul {
+    width: 95%;
+  }
+  body main #content6 ul li {
+    width: 100%;
+  }
+  body main #content6 ul li img {
+    width: 100%;
+    height: 120px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body main #content6 ul li p {
+    width: 95%;
+    margin: 0 auto 30px auto;
+  }
+}
+body main #content6 #content6-text {
+  background-color: white;
+  border: 2px solid #ebb94d;
+  border-radius: 5px;
+  width: 95%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px;
+}
+body main #content6 #content6-text h2 {
+  font-weight: 600;
+  color: #ebb94d;
+  margin-bottom: 15px;
+}
+body main #content6 #content6-text p {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+body main #content6 #content6-text p:last-child {
+  font-size: 1.1rem;
+}
+@media (max-width: 1190px) {
+  body main #content6 #content6-text {
+    width: 82%;
+    padding: 40 px 20px;
+  }
+  body main #content6 #content6-text h2 {
+    font-size: 1.7rem;
+  }
+  body main #content6 #content6-text p {
+    font-size: 1.1rem;
+  }
+  body main #content6 #content6-text p:last-child {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #content6 #content6-text {
+    width: 95%;
+    padding: 20px 10px;
+  }
+  body main #content6 #content6-text h2 {
+    font-size: 1.3rem;
+  }
+  body main #content6 #content6-text p {
+    font-size: 1.1rem;
+    width: 70%;
+    margin: 10px auto;
+  }
+  body main #content6 #content6-text p:last-child {
+    font-size: 0.7rem;
+    width: 100%;
+  }
+}
+body main #content6 #content6-attention {
+  margin-top: 50px;
+}
+@media (max-width: 1190px) {
+  body main #content6 #content6-attention {
+    width: 82%;
+    margin: 20px auto;
+    font-size: 0.8rem;
+  }
+}
+body main #member {
+  background-image: url(../img/member/teacherbg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 100px 0 50px 0;
+}
+@media (max-width: 768px) {
+  body main #member {
+    padding-top: 75px;
+    padding-bottom: 20px;
+  }
+}
+body main #member h2, body main #member i, body main #member p {
+  color: white;
+}
+body main #member h2 {
+  font-weight: 600;
+}
+@media (max-width: 1190px) {
+  body main #member h2 {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #member h2 {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+  }
+}
+body main #member #member-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 40px;
+}
+@media (max-width: 1190px) {
+  body main #member #member-title {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #member #member-title {
+    font-size: 0.9rem;
+    width: 60%;
+    margin: 20px auto;
+  }
+}
+body main #member ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1170px;
+  margin: 240px auto 0 auto;
+  padding-left: 0;
+}
+@media (max-width: 1190px) {
+  body main #member ul {
+    width: 92%;
+  }
+}
+@media screen and (max-width: 1190px) and (max-width: 1050px) {
+  body main #member ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+body main #member ul li {
+  width: 31%;
+  position: relative;
+}
+body main #member ul li img {
+  border-radius: 100%;
+  width: 220px;
+  position: absolute;
+  top: -190px;
+  left: 70px;
+}
+body main #member ul li .member-profile {
+  border: 3px solid white;
+  padding: 40px 40px 50px 40px;
+  height: 450px;
+}
+body main #member ul li .member-profile .profile-role,
+body main #member ul li .member-profile .profile-name {
+  font-size: 1.2rem;
+}
+body main #member ul li .member-profile .profile-text {
+  font-size: 1.1rem;
+  text-align: left;
+}
+@media screen and (max-width: 1190px) and (max-width: 1050px) {
+  body main #member ul li {
+    width: 100%;
+    margin-top: 230px;
+  }
+  body main #member ul li img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+  }
+  body main #member ul li .member-profile {
+    height: 100%;
+  }
+  body main #member ul li .member-profile .profile-role,
+  body main #member ul li .member-profile .profile-name {
+    font-size: 1rem;
+  }
+  body main #member ul li .member-profile .profile-text {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #member ul li {
+    margin-top: 140px;
+  }
+  body main #member ul li img {
+    width: 140px;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+  }
+  body main #member ul li .member-profile {
+    padding: 20px 10px 0px 10px;
+  }
+  body main #member ul li .member-profile .profile-role,
+  body main #member ul li .member-profile .profile-name {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  body main #member ul li .member-profile .profile-text {
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+  }
+}
+body main #qanda {
+  background-color: #ebb94d;
+  padding-bottom: 30px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  body main #qanda {
+    padding-bottom: 20px;
+  }
+}
+body main #qanda p {
+  display: inline-block;
+  background-color: white;
+  color: #ebb94d;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  padding-top: 33px;
+  margin-top: 40px;
+}
+@media (max-width: 1190px) {
+  body main #qanda p {
+    font-size: 1.4rem;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 768px) {
+  body main #qanda p {
+    font-size: 0.9rem;
+    width: 70px;
+    height: 70px;
+    padding-top: 24px;
+    margin-top: 25px;
+  }
+}
+body main #qanda div {
+  margin: 0 auto;
+  position: relative;
+  width: 950px;
+  max-width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+body main #qanda div::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-top: 5px solid white;
+  border-left: 5px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body main #qanda div::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+body main #qanda div h3 {
+  color: white;
+  font-weight: 600;
+  padding: 20px;
+}
+@media (max-width: 1190px) {
+  body main #qanda div h3 {
+    font-size: 1.3rem;
+    line-height: 40px;
+  }
+}
+@media (max-width: 768px) {
+  body main #qanda div h3 {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+body main #qanda::after {
+  content: " ";
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 25px solid transparent;
+  border-top-color: #ebb94d;
+  top: 100%;
+  left: 50%;
+  margin-left: -25px;
+}
+@media (max-width: 768px) {
+  body main #qanda::after {
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 15px solid transparent;
+    border-top-color: #ebb94d;
+    top: 100%;
+    left: 50%;
+    margin-left: -15px;
+  }
+}
+body main #message {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+body main #message h2 {
+  font-weight: 600;
+}
+body main #message #proof {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+body main #message #get-message {
+  margin-top: 30px;
+}
+body main #message #get-message #message-brsc {
+  display: none;
+}
+body main #message ul {
+  padding-left: 0;
+  width: 880px;
+  margin: 0 auto;
+}
+body main #message ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+body main #message ul li .message-img {
+  width: 31%;
+}
+body main #message ul li .message-img img {
+  width: 100%;
+  border: 3px solid #ebb94d;
+}
+body main #message ul li .message-text {
+  width: 65%;
+  text-align: left;
+}
+body main #message ul li .message-text p {
+  font-size: 1.3rem;
+  color: #777;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+body main #message ul li .message-text .line-text {
+  margin-top: 0;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  font-style: italic;
+}
+@media (max-width: 1190px) {
+  body main #message h2 {
+    font-size: 1.7rem;
+  }
+  body main #message #proof {
+    font-size: 1rem;
+  }
+  body main #message #get-message {
+    font-size: 0.8rem;
+  }
+  body main #message ul {
+    width: 95%;
+  }
+}
+@media (max-width: 768px) {
+  body main #message {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+  body main #message h2 {
+    font-size: 1.2rem;
+  }
+  body main #message #proof {
+    font-size: 0.9rem;
+  }
+  body main #message #get-message #message-brsc {
+    display: block;
+  }
+  body main #message ul li .message-text .message-img img {
+    margin-top: 10px;
+  }
+  body main #message ul li .message-text p {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  body main #message ul li .message-text .line-text {
+    font-size: 0.9rem;
+  }
+}
+body main #content-study {
+  background-image: url(../img/contnetstudy/classbg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 80px;
+}
+body main #content-study h2 {
+  font-weight: 600;
+  color: white;
+}
+body main #content-study p {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 15px;
+}
+body main #content-study #table-list {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 880px;
+  display: flex;
+  justify-content: space-between;
+}
+body main #content-study #table-list .table {
+  width: 48%;
+}
+body main #content-study #table-list .table .row-header {
+  background-color: #016ea9;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border: 2px solid #016ea9;
+  border-radius: 5px 5px 0 0;
+}
+body main #content-study #table-list .table .row-header .cell {
+  color: white;
+  padding: 15px;
+}
+body main #content-study #table-list .table .row {
+  width: 100%;
+  margin: 0;
+  border-left: 2px solid #016ea9;
+  border-right: 2px solid #016ea9;
+}
+body main #content-study #table-list .table .row:last-child {
+  border-bottom: 2px solid #016ea9;
+  border-radius: 0 0 5px 5px;
+}
+body main #content-study #table-list .table .row .cell {
+  width: 100%;
+  background-color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 10px 0;
+  border-bottom: 1px dashed #c7c7c7;
+}
+@media (max-width: 1190px) {
+  body main #content-study h2 {
+    font-size: 1.7rem;
+  }
+  body main #content-study p {
+    font-size: 1rem;
+  }
+  body main #content-study #table-list {
+    width: 650px;
+  }
+  body main #content-study #table-list .table .row-header .cell {
+    font-size: 1.2rem;
+  }
+  body main #content-study #table-list .table .row .cell {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+}
+@media screen and (max-width: 1190px) and (max-width: 1090px) {
+  body main #content-study #table-list {
+    flex-direction: column;
+  }
+  body main #content-study #table-list .table {
+    width: 100%;
+  }
+}
+@media (max-width: 1190px) and (max-width: 768px) {
+  body main #content-study {
+    padding-bottom: 40px;
+  }
+  body main #content-study h2 {
+    font-size: 1.3rem;
+  }
+  body main #content-study p {
+    font-size: 0.9rem;
+  }
+  body main #content-study #table-list {
+    margin-top: 40px;
+    width: 95%;
+  }
+}
+body main #content7 {
+  background-color: #016ea9;
+  padding: 40px 0 30px 0;
+}
+@media (max-width: 768px) {
+  body main #content7 {
+    padding: 20px 0 5px 0;
+  }
+}
+body main #content7 p {
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+@media (max-width: 1190px) {
+  body main #content7 p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #content7 p {
+    font-size: 1rem;
+  }
+}
+body main #entry {
+  padding-top: 70px;
+  padding-bottom: 10px;
+}
+body main #entry h2 {
+  font-weight: 600;
+}
+@media (max-width: 1190px) {
+  body main #entry h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #entry h2 {
+    font-size: 1.2rem;
+  }
+}
+body main #entry #entry-img {
+  margin-top: 50px;
+  width: 1100px;
+}
+@media (max-width: 1190px) {
+  body main #entry #entry-img {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  body main #entry #entry-img {
+    display: none;
+  }
+}
+body main #entry ul {
+  width: 92%;
+  max-width: 1300px;
+  margin: 40px auto;
+  padding-left: 0;
+}
+@media (max-width: 1190px) {
+  body main #entry ul {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  body main #entry ul {
+    width: 95%;
+  }
+}
+body main #entry ul li {
+  display: flex;
+  align-items: center;
+  background-color: #fef5e0;
+  padding: 40px;
+}
+body main #entry ul li .flow-image {
+  width: 20%;
+}
+body main #entry ul li .flow-image h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-top: 30px;
+}
+body main #entry ul li .flow-image i {
+  display: none;
+}
+body main #entry ul li .flow-text {
+  display: block;
+  width: 80%;
+  text-align: left;
+}
+body main #entry ul li .flow-text p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+body main #entry ul li .flow-text .flow-explan {
+  font-weight: normal;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  body main #entry ul li {
+    margin-top: 5px;
+    flex-direction: column;
+    padding: 15px;
+    padding-bottom: 0;
+  }
+  body main #entry ul li .flow-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  body main #entry ul li .flow-image div {
+    display: flex;
+  }
+  body main #entry ul li .flow-image div img {
+    width: 40px;
+  }
+  body main #entry ul li .flow-image div h3 {
+    margin: 8px;
+    font-size: 1rem;
+  }
+  body main #entry ul li .flow-image div h3 br {
+    display: none;
+  }
+  body main #entry ul li .flow-image div:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  body main #entry ul li .flow-image i {
+    display: block;
+  }
+  body main #entry ul li .flow-text {
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  body main #entry ul li .flow-text p {
+    font-size: 0.85rem;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+  body main #entry ul li .flow-text .flow-explan {
+    font-size: 0.8rem;
+  }
+  body main #entry ul li .flow-textsp {
+    display: none;
+  }
+}
+body main #entry ul li:first-child .flow-textsp {
+  display: block;
+}
+@media (max-width: 1190px) {
+  body main #entry ul .flowline {
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  body main #entry ul .flowline {
+    display: none;
+  }
+}
+body main #why-bankoku {
+  background-image: url(../img/bangkokbg.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 100px 0 90px 0;
+  text-align: left;
+}
+body main #why-bankoku #why-text {
+  width: 80%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+body main #why-bankoku #why-text h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+body main #why-bankoku #why-text #reason {
+  color: white;
+  margin: 25px 0;
+}
+body main #why-bankoku #why-text ul {
+  padding-left: 0;
+  list-style: inside;
+}
+body main #why-bankoku #why-text ul li {
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+body main #why-bankoku #why-text #because {
+  color: white;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-top: 10px;
+}
+@media (max-width: 1190px) {
+  body main #why-bankoku {
+    padding: 70px 0 45px 0;
+  }
+  body main #why-bankoku #why-text {
+    width: 85%;
+  }
+  body main #why-bankoku #why-text h2 {
+    font-size: 1.5rem;
+  }
+  body main #why-bankoku #why-text #reason {
+    font-size: 0.85rem;
+  }
+  body main #why-bankoku #why-text ul li {
+    font-size: 1rem;
+  }
+  body main #why-bankoku #why-text #because {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #why-bankoku {
+    background-image: url(../img/bangkokbgsp.jpg);
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  body main #why-bankoku #why-text {
+    width: 86%;
+  }
+  body main #why-bankoku #why-text h2 {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  body main #why-bankoku #why-text ul li {
+    font-size: 0.85rem;
+  }
+  body main #why-bankoku #why-text #because {
+    font-size: 1rem;
+  }
+}
+body main #benefit {
+  background-color: #f7c23c;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+body main #benefit #benefit-title {
+  font-weight: 600;
+}
+body main #benefit p {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+body main #benefit p span {
+  color: white;
+}
+body main #benefit #benefit-list-title {
+  position: relative;
+  top: 27px;
+  background-color: #f7c23c;
+  display: inline-block;
+}
+body main #benefit #benefit-list-title h2 {
+  font-weight: 600;
+  padding: 0 20px;
+}
+body main #benefit #benefit-list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 92%;
+  max-width: 1300px;
+  margin: 0 auto;
+  border: 2px solid white;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+body main #benefit #benefit-list dl {
+  width: 280px;
+  height: 280px;
+  background-color: white;
+  border-radius: 100%;
+}
+body main #benefit #benefit-list dl dt {
+  margin-top: 65px;
+  color: #f7c23c;
+  font-size: 1.7rem;
+  font-weight: normal;
+}
+body main #benefit #benefit-list dl dd {
+  width: 85%;
+  font-weight: 600;
+  margin: 10px auto;
+}
+@media (max-width: 1190px) {
+  body main #benefit #benefit-title {
+    font-size: 1.7rem;
+  }
+  body main #benefit p {
+    font-size: 1rem;
+  }
+  body main #benefit #benefit-list-title {
+    width: 45%;
+    top: 40px;
+  }
+  body main #benefit #benefit-list-title h2 {
+    font-size: 1.7rem;
+  }
+  body main #benefit #benefit-list {
+    width: 92%;
+  }
+}
+@media screen and (max-width: 1190px) and (max-width: 1090px) {
+  body main #benefit #benefit-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  body main #benefit #benefit-list dl {
+    margin-top: 20px;
+  }
+  body main #benefit #benefit-list dl:first-child {
+    margin-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  body main #benefit {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  body main #benefit #benefit-title {
+    font-size: 1.2rem;
+  }
+  body main #benefit p {
+    width: 75%;
+    margin: 30px auto;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+  body main #benefit #benefit-list-title {
+    width: 70%;
+    top: 20px;
+  }
+  body main #benefit #benefit-list-title h2 {
+    font-size: 1.2rem;
+  }
+  body main #benefit #benefit-list dl {
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    width: 82%;
+    height: unset;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+  body main #benefit #benefit-list dl dt {
+    background-color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    padding-top: 20px;
+    margin-top: 10px;
+  }
+  body main #benefit #benefit-list dl dd {
+    color: white;
+    text-align: left;
+    margin-left: 7%;
+    font-size: 0.85rem;
+  }
+}
+body main #not-volunteer {
+  background-image: url(../img/specialdetail.jpg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+body main #not-volunteer p, body main #not-volunteer h2 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+body main #not-volunteer .not-volunteer-brsp {
+  display: none;
+}
+body main #not-volunteer p {
+  font-size: 1.4rem;
+}
+body main #not-volunteer #not-volunteer-circle {
+  margin: 0 auto;
+  position: relative;
+  width: 950px;
+  max-width: calc(100% - 40px);
+  box-sizing: border-box;
+}
+body main #not-volunteer #not-volunteer-circle::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-top: 5px solid white;
+  border-left: 5px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body main #not-volunteer #not-volunteer-circle::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-right: 5px solid white;
+  border-bottom: 5px solid white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+body main #not-volunteer #not-volunteer-circle h2 {
+  padding: 30px 0;
+}
+@media (max-width: 1190px) {
+  body main #not-volunteer h2 {
+    font-size: 1.7rem;
+  }
+  body main #not-volunteer p {
+    font-size: 1.15rem;
+  }
+  body main #not-volunteer #not-volunteer-circle {
+    width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  body main #not-volunteer {
+    background-image: url(../img/specialdetailsp.jpg);
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  body main #not-volunteer .not-volunteer-brsp {
+    display: block;
+  }
+  body main #not-volunteer h2 {
+    font-size: 1.2rem;
+    padding-bottom: 15px;
+  }
+  body main #not-volunteer p {
+    font-size: 0.8rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+  }
+  body main #not-volunteer #not-volunteer-circle h2 {
+    padding: 15px 0;
+  }
+  body main #not-volunteer #not-volunteer-circle::before, body main #not-volunteer #not-volunteer-circle::after {
+    width: 30px;
+    height: 30px;
+  }
+}
+body main #founder {
+  padding: 70px 0;
+}
+body main #founder h2 {
+  font-weight: 600;
+}
+body main #founder #founder-message {
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-top: 40px;
+}
+body main #founder #founder-letter {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+body main #founder #founder-letter #founder-img {
+  width: 22%;
+}
+body main #founder #founder-letter #founder-img img {
+  width: 100%;
+}
+body main #founder #founder-letter #founder-text {
+  width: 74%;
+  text-align: left;
+  padding-left: 10px;
+}
+body main #founder #founder-letter #founder-text ul {
+  padding-left: 0;
+  list-style: inside;
+}
+@media (max-width: 1190px) {
+  body main #founder h2 {
+    font-size: 1.7rem;
+  }
+  body main #founder #founder-message {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 1190px) and (max-width: 1090px) {
+  body main #founder #founder-letter {
+    flex-direction: column;
+  }
+  body main #founder #founder-letter #founder-img {
+    width: 100%;
+  }
+  body main #founder #founder-letter #founder-text {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 768px) {
+  body main #founder {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  body main #founder h2 {
+    font-size: 1.2rem;
+  }
+  body main #founder #founder-message {
+    font-size: 1rem;
+    width: 75%;
+    margin: 20px auto;
+  }
+  body main #founder #founder-letter {
+    margin-bottom: 20px;
+  }
+  body main #founder #founder-letter #founder-text {
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+}
+body main #form {
+  background-color: #ebb94d;
+  padding: 50px;
+}
+body main #form p, body main #form h2 {
+  font-weight: 600;
+}
+body main #form p {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  body main #form {
+    padding-bottom: 30px;
+  }
+  body main #form h2:first-child {
+    font-size: 1.2rem;
+  }
+  body main #form p {
+    font-size: 0.9rem;
+  }
+}
+body main #question {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+body main #question h2 {
+  font-weight: 600;
+}
+body main #question dl {
+  text-align: left;
+  width: 90%;
+  max-width: 1300px;
+  margin: 40px auto;
+}
+body main #question dl dt {
+  border: 1px solid #d3d3d3;
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+body main #question dl dt:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+body main #question dl dd {
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 20px;
+  padding-bottom: 30px;
+  display: none;
+}
+body main #question dl dd:nth-child(2) {
+  display: block;
+}
+@media (max-width: 1190px) {
+  body main #question h2 {
+    font-size: 1.7rem;
+  }
+  body main #question dl dt {
+    font-size: 1.1rem;
+  }
+  body main #question dl dd {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  body main #question {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  body main #question h2 {
+    font-size: 1.3rem;
+  }
+  body main #question dl {
+    width: 95%;
+    margin-top: 30px;
+  }
+  body main #question dl dt {
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+  }
+  body main #question dl dd {
+    font-size: 0.85rem;
+    padding: 15px;
+    padding-bottom: 20px;
+  }
+}
+body footer {
+  background-color: #ececec;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+body footer p {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+body footer p a {
+  color: #016ea9;
+}
+body footer #footer-sns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+body footer #footer-sns a {
+  font-size: 0.9rem;
+}
+body footer #footer-sns #footer-twitter {
+  height: 20px;
+  box-sizing: border-box;
+  padding: 1px 12px 1px 12px;
+  background-color: #1d9bf0;
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 500;
+  cursor: pointer;
+}
+body footer #footer-sns #footer-twitter i {
+  color: white;
+}
+body footer #footer-sns #footer-nice,
+body footer #footer-sns #footer-share {
+  background-color: rgb(55, 112, 211);
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  body footer {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  body footer p {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 0.6rem;
+  }
+}
+body .pagetop {
+  cursor: pointer;
+  position: fixed;
+  bottom: 90px;
+  right: 50px;
+  background-color: #ececec;
+  padding: 20px;
+}
+body .pagetop .fa-chevron-up {
+  font-size: 30px;
+}
+body .pagetop .fa-chevron-up:before {
+  content: "\f077";
+}
+@media (max-width: 768px) {
+  body .pagetop {
+    bottom: 20px;
+    right: 10px;
+    padding: 15px;
+  }
+  body .pagetop .fa-chevron-up {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=index2.css.map */
