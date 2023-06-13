@@ -1,0 +1,329 @@
+@charset "UTF-8";
+* {
+  color: #333;
+}
+* a {
+  color: inherit;
+  text-decoration: none;
+}
+* ul {
+  list-style: none;
+}
+* .contents {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+body {
+  font-family: "Noto Sans JP", "Noto Sans", sans-serif;
+}
+body .readmore {
+  text-align: center;
+}
+body .readmore a {
+  font-size: 0.875rem;
+  cursor: pointer;
+  position: relative;
+}
+body .readmore a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+body .readmore a:hover:after {
+  opacity: 0; /* ホバー時に不透明度0% */
+  transform: translateY(2px);
+}
+
+header {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+  position: fixed;
+}
+header #header-logo {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 70px;
+}
+header #header-logo a {
+  display: inline-block;
+  width: 145px;
+  height: 30px;
+}
+header #header-logo a img {
+  width: 100%;
+}
+header #header-menu {
+  background-color: #333;
+  height: 40px;
+}
+header #header-menu ul {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+header #header-menu ul li {
+  margin-right: 60px;
+  color: white;
+}
+header #header-menu ul li a {
+  font-size: 0.875rem;
+  line-height: 21px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  header #header-menu ul {
+    overflow-x: scroll;
+  }
+}
+
+main {
+  padding-top: 150px;
+}
+main #main-pickup {
+  display: flex;
+  justify-content: space-between;
+}
+main #main-pickup li {
+  width: 32%;
+}
+main #main-pickup li img {
+  width: 100%;
+}
+main #main-pickup li p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  main #main-pickup {
+    flex-direction: column;
+  }
+  main #main-pickup li {
+    width: 100%;
+  }
+  main #main-pickup li .readmore {
+    margin-bottom: 30px;
+  }
+}
+main #main-section {
+  padding-top: 70px;
+  display: flex;
+}
+main #main-section #content1 {
+  width: 66%;
+}
+main #main-section #content1 li {
+  margin-bottom: 80px;
+}
+main #main-section #content1 li:last-child {
+  margin-bottom: 0;
+}
+main #main-section #content1 li .travel-date {
+  display: flex;
+  font-size: 0.875rem;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+main #main-section #content1 li .travel-date a {
+  margin-right: 20px;
+}
+main #main-section #content1 li img {
+  width: 97%;
+}
+main #main-section #content1 li .travel-text {
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.96rem;
+}
+main #main-section #content2 {
+  width: 33%;
+}
+main #main-section #content2 img {
+  width: 100%;
+}
+main #main-section #content2 .content2-title {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+main #main-section #content2 #profile {
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+main #main-section #content2 #profile #profile-img img {
+  border-radius: 100%;
+  width: 130px;
+  height: 130px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+main #main-section #content2 #profile #profile-text {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 12.5px;
+}
+main #main-section #content2 #ranking {
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+main #main-section #content2 #ranking ul {
+  margin-top: 30px;
+}
+main #main-section #content2 #ranking ul li p {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+main #main-section #content2 #ranking ul li p:last-child {
+  margin-bottom: 60px;
+}
+main #main-section #content2 #archive {
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+}
+main #main-section #content2 #archive ul {
+  margin-top: 30px;
+}
+main #main-section #content2 #archive ul li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #333;
+}
+main #main-section #content2 #archive ul li:last-child {
+  border-bottom: 1px solid #333;
+}
+main #main-section #content2 #archive ul li a {
+  font-size: 13px;
+  padding-left: 20px;
+}
+@media (max-width: 768px) {
+  main #main-section {
+    flex-direction: column;
+  }
+  main #main-section #content1 {
+    width: 100%;
+  }
+  main #main-section #content1 li img {
+    width: 100%;
+  }
+  main #main-section #content2 {
+    width: 100%;
+    margin-top: 80px;
+  }
+  main #main-section #content2 #profile {
+    width: 100%;
+  }
+  main #main-section #content2 #ranking {
+    width: 100%;
+  }
+  main #main-section #content2 #archive {
+    width: 100%;
+  }
+}
+
+footer {
+  margin-top: 140px;
+  background-color: #F7F7F7;
+  padding-bottom: 10px;
+}
+footer section {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+footer section .footer-title {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+footer section #about {
+  width: 31%;
+}
+footer section #about p {
+  font-size: 13px;
+  margin-bottom: 20px;
+  width: 92%;
+}
+footer section #about ul li {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+footer section #about ul li a:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f04b";
+  color: #333;
+  margin-right: 5px;
+}
+footer section #menu {
+  width: 31%;
+}
+footer section #menu ul li {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-top: 1px solid #333;
+}
+footer section #menu ul li:last-child {
+  border-bottom: 1px solid #333;
+}
+footer section #menu ul li a {
+  font-size: 13px;
+  margin-left: 14px;
+}
+footer section #twitter {
+  width: 31%;
+}
+footer #copy {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 11px;
+}
+@media (max-width: 768px) {
+  footer {
+    margin-top: 120px;
+  }
+  footer section {
+    flex-direction: column;
+  }
+  footer section #about {
+    width: 100%;
+  }
+  footer section #menu {
+    width: 100%;
+    margin-top: 50px;
+  }
+  footer section #twitter {
+    width: 100%;
+    margin-top: 30px;
+  }
+  footer #copy {
+    margin-top: 90px;
+  }
+}/*# sourceMappingURL=travel.css.map */
