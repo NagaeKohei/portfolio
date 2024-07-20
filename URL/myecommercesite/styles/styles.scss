@@ -1,0 +1,223 @@
+@charset "utf-8";
+
+//メディアクエリの指定
+$sp: 740px; 
+//ここでmax-widthを指定
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+* {
+  ul,ol {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+}
+
+body {
+  background-color: #f9f2e7;
+  font-family: "Montserrat",sans-serif;
+  p,a {
+    font-size: 1.0rem;
+  }
+}
+
+.logo {
+  &:hover {
+    cursor: pointer;
+  }
+  a {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    @include sp {
+      font-size: 25px;
+    }
+  }
+}
+
+header {
+  background-color: #59362c;
+  color: #f9f2e7;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  .header-content {
+    width: 97%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include sp {
+      width: 90%;
+      height: 50px;
+    }
+
+    .header-menu {
+      .main-nav {
+        ul {
+          display: flex;
+          align-items: center;
+          li {
+            margin-left: 15px;
+            a {
+              transition: text-shadow 0.2s ease;
+              &:hover {
+                text-shadow: 0px 0px 4px #f9f2e7;
+              }
+            }
+          }
+        }
+      }
+      @include sp {
+        display: none;
+      }
+    }
+
+    .hamburger-menu{
+      display: none;
+      @include sp {
+        display: block;
+        width: 30px;
+        height: 50px;
+        .hamburger {
+          width: 100%;
+          height: 50px;
+          position: relative;
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background-color: #f9f2e7;
+          }
+          &::before {
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.5s;
+          }
+          &::after {
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.5s;
+          }
+          &.open {
+            &::before {
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) rotate(32deg);
+            }
+            &::after {
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) rotate(-32deg);
+            }  
+          }
+        }
+      }
+    }
+  }
+  .header-menu-sp {
+    display: none;
+    @include sp {
+      .main-nav-sp {
+        margin-top: 20px;
+        ul {
+          li {
+            margin-bottom: 15px;
+            a {
+              display: block;
+              padding: 5px 0;
+              text-align: center;
+              font-size: 1.0rem;
+            }
+            p {
+              text-align: center;
+              padding: 5px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-background {
+  display: none;
+  @include sp {
+    width: 100%;
+    height: 100%;
+    background-color: #00000057;
+    position: fixed;
+    bottom: 0;
+    z-index: 9;
+  }
+}
+
+.header-gap {
+  padding-top: 60px;
+  @include sp {
+    padding-top: 50px;
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: #a5a5a5;
+  padding-top: 40px;
+  @include sp {
+    padding-top: 10px;
+  }
+  a,p {
+    color: #59362c;
+    font-size: 0.75rem;
+  }
+  .footer-menu {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include sp {
+      display: block;
+      .footer-logo {
+        text-align: center;
+      }
+    }
+    .main-nav {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        li {
+          margin-left: 10px;
+          a{
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+      @include sp {
+        display: none;
+      }
+    }
+  }
+  .footer-copy {
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 15px;
+    @include sp {
+      margin-top: 10px;
+    }
+  }
+}

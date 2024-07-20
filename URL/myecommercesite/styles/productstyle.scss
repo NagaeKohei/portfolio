@@ -1,0 +1,175 @@
+//メディアクエリの指定
+$pc: 1350px; 
+//ここでmax-widthを指定
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+//メディアクエリの指定
+$sp: 740px; 
+//ここでmax-widthを指定
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+header {
+  background-color: #a5a5a5;
+  height: 100vh;
+  width: 14.5%;
+  z-index: 9;
+  @include sp {
+    background-color: #59362c;
+    color: #f9f2e7;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 10;
+  }
+  .header-content {
+    flex-direction: column;
+    align-items: start;
+    @include sp {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      height: 50px;
+    }
+    .header-logo {
+      margin-top: 10px;
+      margin-left: 10px;
+      @include sp {
+        margin-top: 0;
+      }
+    }
+    .header-menu {
+      .main-nav {
+        ul {
+          flex-direction: column;
+          align-items: start;
+          margin-top: 100px;
+          li {
+            margin-left: 10px;
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin-left: 14.5%;
+  @include sp {
+    margin-left: 0;  
+  }
+}
+
+
+.main-products {
+  .products-title {
+    width: 1110px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    @include sp {
+      width: 100%;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 2.5rem;
+      @include sp {
+        font-size: 2.0rem;
+      }
+    }
+    .filter-content{
+      margin-top: 10px;
+      margin-left: 30px;
+      @include sp {
+        margin-left: 0;
+      }
+      label {
+        font-size: 16px;
+        color: #555;
+      }
+      #category-filter {
+        padding: 5px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+        &:hover {
+          cursor: pointer;
+        }
+        &:focus {
+          border-color: #333;
+          outline: none;
+        }
+      }
+    }
+  }
+  .products-list {
+    width: 100%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 330px);
+    grid-template-rows: repeat(10, 650px); // 高さを自動に変更
+    column-gap: 60px;
+    justify-content: center; // 水平方向の中央揃え
+    align-items: start;
+    @include pc {
+      width: 95%;
+      margin-bottom: 100px;
+      grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(15, 400px); // 高さを自動に変更
+      column-gap: 10px;
+      row-gap: 30px;
+    }
+    li {
+      &:hover div img {
+        transform: scale(1.1); // 親のa要素にホバー時、new-imgを1.1倍に拡大
+      }   
+      div {
+        width: 330px;
+        height: 500px;
+        background-color: #eaeaea;
+        @include pc{
+          width: 100%;
+          height: 300px;
+        }
+        img {
+          width: 80%;
+          height: 500px;
+          display: block;
+          margin: 0 auto;
+          object-fit: contain;
+          transition: transform 0.2s ease-in-out;
+          @include pc {
+            height: 300px;
+          }
+        }
+      }
+      .products-name {
+        width: 270px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bold;
+        @include pc {
+          width: 80%;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  z-index: 10;
+}

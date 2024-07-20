@@ -1,0 +1,462 @@
+@charset "utf-8";
+
+//メディアクエリの指定
+$sp: 740px; 
+//ここでmax-widthを指定
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+.main-visual {
+  width: 100%;
+  height: calc(100vh - 60px);
+  background-image: url(../img/mainvisual.png);
+  background-position: center 27%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include sp {
+    height: calc(100vh - 50px);
+    background-position: center;
+    background-size: cover;
+  }
+  .header-title {
+    margin-left: 30px;
+    position: relative;
+    @include sp {
+      margin-left: 10px;
+    }
+    h1 {
+      padding-top: 50px;
+      font-family: 'Playfair Display', serif;
+      text-shadow: 
+                1px 1px 0px #f9f2e7, 
+                -1px -1px 0px #f9f2e7, 
+                -1px 1px 0px #f9f2e7, 
+                1px -1px 0px #f9f2e7;
+      font-size: 20vh; // フォントサイズをビューポート高さの10%に設定
+      span {
+        color: #f9f2e7;
+        text-shadow: 
+                1px 1px 0px black, 
+                -1px -1px 0px black, 
+                -1px 1px 0px black, 
+                1px -1px 0px black;
+      }
+      @include sp {
+        padding-top: 40px;
+        text-align: center;
+        line-height: 100px;
+        font-size: 8vh; // スマホ用のフォントサイズをビューポート高さの8%に設定
+      }
+    }
+    p {
+      position: absolute;
+      bottom: 38px;
+      left: 500px;
+      font-size: 1.5rem;
+      font-weight:bold;
+      text-shadow: 
+                1px 1px 0px #f9f2e7, 
+                -1px -1px 0px #f9f2e7, 
+                -1px 1px 0px #f9f2e7, 
+                1px -1px 0px #f9f2e7;
+      @include sp {
+        position: static;
+        width: 75%;
+        margin: 30px auto 0 auto;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.main-content {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px;
+  @include sp {
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  p,a,h2,h3,dt,dd {
+    color: #907064;
+    font-size: 0.925rem;
+  }
+  h2 {
+    text-align: start;
+    font-size: 1.75rem;
+    @include sp {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.concept{
+  .concept-text {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @include sp {
+      margin-top: 8px;
+      flex-direction: column;
+    }
+    p {
+      width: 50%;
+      line-height: 30px;
+      @include sp {
+        width: 100%;
+      }
+    }
+    .concept-img {
+      width: 38%;
+      height: 250px;
+      background-color: antiquewhite;
+      position: relative;
+      border-radius: 10px;
+      @include sp {
+        width: 100%;
+        margin-top: 10px;
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.new-products{
+  .new-choco {
+    margin-top: 20px;
+    overflow-x: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    @include sp {
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        height: 6px; /* 横方向スクロールバーの高さ */
+      }
+      &::-webkit-scrollbar-track {
+        background: #f0f0f0; /* スクロールバーのトラック部分の色 */
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #888; /* スクロールバーのつまみ部分の色 */
+        border-radius: 6px; /* スクロールバーのつまみ部分の角を丸くする */
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555; /* スクロールバーのつまみ部分にホバーしたときの色 */
+      }
+      .new-choco-gap {
+        display: none;
+      }
+
+    }
+    .new-choco-gap {
+      height: 6px;
+    }
+    &:hover {
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        height: 6px; /* 横方向スクロールバーの高さ */
+      }
+      &::-webkit-scrollbar-track {
+        background: #f0f0f0; /* スクロールバーのトラック部分の色 */
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #888; /* スクロールバーのつまみ部分の色 */
+        border-radius: 6px; /* スクロールバーのつまみ部分の角を丸くする */
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555; /* スクロールバーのつまみ部分にホバーしたときの色 */
+      }
+      .new-choco-gap {
+        display: none;
+      }
+    }
+    .new-list {
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        @include sp {
+          margin-right: 10px;
+        }
+        &:last-child {
+          margin-right: 300px;
+          @include sp {
+            margin-right: 0px;
+          }
+        }
+        &:first-child {
+          margin-left: 300px;
+          @include sp {
+            margin-left: 0px;
+          }
+        }
+        background-image: url(../img/5_1024.jpg);
+        &:last-child {
+          background-image: repeating-linear-gradient(
+                45deg,
+                #f9f2e7,
+                #f9f2e7 15px,
+                #dabaa9 20px,
+                #dabaa9 30px
+            );
+        }
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 500px;
+        height: 650px;
+        @include sp {
+          width: 300px;
+          height: 310px;
+        }
+        a {
+          padding-top: 60px;
+          display: block;
+          height: 100%;
+          @include sp {
+            padding-top: 20px;
+          }
+          h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            @include sp {
+              margin-bottom: 8px;
+            }
+          }
+          .new-img {
+            width: 330px;
+            height: 500px;
+            background-color: #eaeaea7e;
+            margin: 0 auto;
+            border-radius: 5%;
+            transition: transform 0.2s ease-in-out;
+            @include sp {
+              width: 300px;
+              height: 250px;
+            }
+            img {
+              width: 80%;
+              height: 500px;
+              display: block;
+              margin: 0 auto;
+              object-fit: contain;
+              @include sp {
+                height: 250px;
+              }
+            }
+          }
+          &:hover .new-img {
+            transform: scale(1.1); // 親のa要素にホバー時、new-imgを1.1倍に拡大
+          }          
+        }
+        &:last-child {
+          a {
+            h3 {
+              text-shadow: 
+              1px 1px 0px #f9f2e7, 
+              -1px -1px 0px #f9f2e7, 
+              -1px 1px 0px #f9f2e7, 
+              1px -1px 0px #f9f2e7;
+            }
+            .new-img {
+              position: relative;
+              i {
+                position: absolute;
+                top: 50%; // 縦方向で中央に配置
+                left: 50%; // 横方向で中央に配置
+                transform: translate(-50%, -50%);
+                font-size: 10rem;
+                @include sp {
+                  font-size: 5.0rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.map-section {
+  @include sp {
+    display: none;
+  }
+  .map{
+    margin-top: 40px;  
+    height: 600px;
+    background-image: url(../img/世界地図2.png);
+    background-repeat: no-repeat;
+    background-size:  cover;
+    background-position: center;
+    position: relative;
+    .map-area {
+      position: absolute;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        text-shadow: 
+        1px 1px 0px #f9f2e7, 
+        -1px -1px 0px #f9f2e7, 
+        -1px 1px 0px #f9f2e7, 
+        1px -1px 0px #f9f2e7;
+        width: 150px;
+        height: 150px;
+        border: 2px dotted ;
+        border-radius: 50%;
+
+        overflow: hidden;
+        position: relative;
+        transition-duration: .4s;
+        z-index: 2;
+
+        &::after {
+          background: #5ec1bfd4;
+          border-radius: 50%;
+          content: "";
+          display: block;
+          margin: auto;
+          opacity: 0;
+          pointer-events: none;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          width: 100%;
+          padding-top: 100%;
+          height: 0;
+          z-index: -1;
+          transform: translateY(-50%) scale(0.1);
+          transition: opacity .5s, transform 0s;
+          transition-delay: 0s, .4s;
+        }
+
+        &:hover {
+          &::after {
+            opacity: 1;
+            transform: translateY(-50%) scale(1.1);
+            transition-delay: 0s;
+            transition: opacity .8s, transform .5s ease-in-out;
+          }
+        }
+      }
+    }
+    .europe {
+      top: 140px;
+      left: 520px;
+      a {
+        width: 150px;
+        height: 150px;
+        border: 2px dotted ;
+        border-radius: 50%;
+      }
+    }
+    .asia {
+      top: 235px;
+      left: 660px;
+      a {
+        height: 100px;
+        width: 280px;
+        border: 2px dotted ;
+        border-radius: 50%;
+      }
+    }
+    .north-america {
+      top: 130px;
+      left: 180px;
+      a {
+        height: 220px;
+        width: 220px;
+        border: 2px dotted ;
+        border-radius: 50%;
+      }
+    }
+    .south-america {
+      top: 350px;
+      left: 290px;
+      a {
+        height: 210px;
+        width: 210px;
+        border: 2px dotted ;
+        border-radius: 50%;
+      }
+    }
+    .australia {
+      top: 390px;
+      left: 840px;
+      a {
+        height: 170px;
+        width: 170px;
+        border: 2px dotted ;
+        border-radius: 50%;
+      }
+    }
+    .africa {
+      top: 290px;
+      left: 500px;
+      a {
+        height: 200px;
+        width: 200px;
+        border: 2px dotted ;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.news {
+  margin-bottom: 100px;
+  @include sp {
+    margin-bottom: 40px;
+  }
+  .news-grid {
+    margin-top: 20px;
+    margin-left: 20px;
+    @include sp {
+      margin-left: 0;
+    }
+    dd,dt {
+      font-size: 0.8rem;
+    }
+    .news-item {
+      margin-top: 20px;
+      border-bottom: 1px solid #907064;
+      dd {
+        margin-left: 10px;
+      }
+    }
+    
+    .accordion-content {
+      display: none;
+    }
+
+  }
+
+  .accordion-btn-content {
+    margin: 10px;
+    color: #907064;
+    text-align: center;
+    font-size: 2.0rem;
+    .accordion-btn {
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+  }
+}
